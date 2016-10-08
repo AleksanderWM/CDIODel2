@@ -50,7 +50,7 @@ I skal have afprøvningskoden med i projektet (vi foreslår et antal JUnit tests
 
 ###Projektlederens bemærkninger:
 Det er tilladt at lave udskrifter på engelsk, men vær konsekvent. 
-Overhold GRASP principperne Creator, Controller, Høj binding (High Cohesion), Information Expert, Lav kobling (Low Coupling).
+Overhold GRASP(https://en.wikipedia.org/wiki/GRASP_(object-oriented_design) principperne Creator, Controller, Høj binding (High Cohesion), Information Expert, Lav kobling (Low Coupling).
 Rapporten kunne have samme struktur som CDIO_del1
 Benyt de terninger I allerede har lavet.
 Jeg vil foreslå, at I løser opgaven i følgende rækkefølge:
@@ -81,8 +81,8 @@ Såfremt nogle af disse undlades, skal der være gode begrundelser for dette.
 5. Lav passende toString metoder.
 6. Tilføj metoder til at indsætte og hæve penge på en Konto.
 7. Ændr nu Konto-klassen således at der ikke kan komme en negativ balance,
-8. ligeledes skal metoderne fortælle om transaktionen er blevet gennemført (Hint: brug
-   statementet return til at returnere denne information).
+8. ligeledes skal metoderne fortælle om transaktionen er blevet gennemført (**Hint:** brug
+   statementet **return** til at returnere denne information).
 9. Lav det spil kunden har bedt om med de klasser I nu har.
 10. Hvis I vælger at bruge GUI’en kan I evt. benytte metoderne i Bilag 1.
 11. Husk at skrive en oversigt over pakkerne og deres klasser - klassernes ansvarsområder og evt. spændende funktioner. 
