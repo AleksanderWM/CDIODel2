@@ -6,6 +6,7 @@
 3. **Brugernavn:** DonPhister - Nick Skouenborg (s165233)
 4. **Brugernavn:** mortentang - Morten René Tang Christiansen (s162682)
 5. **Brugernavn:** MartinDahl96 - Jens Martin Dahl-Jensen (s165159)
+6. **Brugernavn:** EmilJorgensen - Emil Frederik Rune Jørgensen (s153063)
 
 ##Opgavebeskrivelse 
 *Version 06. jan. 2016*
