@@ -26,48 +26,48 @@ public class Game {
 		playLoop();
 	}
 	
-	public void landed(Player player)
-	{
-		Text.setTurnDescription(this.Player, this.shake);
-		Text.getTurnDescription();
-	}
-	public void switchens(Player p)
+	//public void landed(Player player,Shaker shake)
+//	{
+//		Text.setTurnDescription(this.Player, this.shake);
+//		Text.getTurnDescription();
+//	}
+	public void gameResult(Player p)
 	{
 		switch(shake.getShake())
 		{
-		case 1: landed(p,Shaker.getShake(),shaker);
+		case 1: Text.TurnDescription(p,shake);
 		break;
-		case 2:landed(p);
+		case 2: Text.TurnDescription(p,shake);
 		break;
-		case 3:landed(p);
+		case 3: Text.TurnDescription(p,shake);
 		break;
-		case 4:landed(p);
+		case 4: Text.TurnDescription(p,shake);
 		break;
-		case 5:landed(p);
+		case 5: Text.TurnDescription(p,shake);
 		break;
-		case 6:landed(p);
+		case 6: Text.TurnDescription(p,shake);
 		break;
-		case 7:landed(p);
+		case 7: Text.TurnDescription(p,shake);
 		break;
-		case 8:landed(p);
+		case 8: Text.TurnDescription(p,shake);
 		break;
-		case 9:landed(p);
+		case 9: Text.TurnDescription(p,shake);
 		break;
-		case 10:landed(p);
+		case 10: Text.TurnDescription(p,shake);
 		break;
-		case 11:landed(p);
+		case 11: Text.TurnDescription(p,shake);
 		break;
-		case 12: landed(p);
+		case 12: Text.TurnDescription(p,shake);
 		break;
 		}
 	}
 	public void playerTurn(Player p)
 	{
-		System.out.println(p.getPlayerName() + " Please roll the dice");
+		System.out.println(p.getPlayerName() + ", please roll the dice");
 		scan.nextLine();
 		shake.setShake();
-		switchens(p);
-		p.setAccount(tekst.getFieldValue(shake.getShake()));
+		gameResult(p);
+		p.setAccount(Text.getFieldValue(shake.getShake()));
 		shake.resetShake();
 		System.out.println(p.getAccount());
 		

@@ -8,7 +8,7 @@ public class Text {
 	Player player;
 	Shaker shake;
 
-	CustomField[] fieldDescription =
+	static CustomField[] fieldDescription =
 		{
 			new CustomField(" ", 0),
 			new CustomField(" ", 0),
@@ -25,13 +25,13 @@ public class Text {
 			new CustomField("Goldmine", +650),
 		};
 	
-	public String getFieldDescription(int point)
+	public static String getFieldDescription(int point)
 	{ 
 		
 		return fieldDescription[point].getFieldText();
 		
 	}
-	public int getFieldValue(int point)
+	public static int getFieldValue(int point)
 	{
 		return fieldDescription[point].getValue();
 	}
@@ -40,13 +40,13 @@ public class Text {
 	public void startDescription()
 	{
 		
-		System.out.println("Hello Players! today we will be playing a game of dices");
-		System.out.println("The object of the game is to get 3000money!!");
-		System.out.println("You will each start with 1000money");
-		System.out.println("Now we have predetermined names for you guys!");
-		System.out.println("Player 1 will be named: Bojack Horseman");
-		System.out.println("Player 2 will be named: Richie Rich");
-		System.out.println("Good luck to both of you! Player one please start your turn");
+		System.out.println("Hello Players! today we will be playing a game of dices\nThe object of the game is to get 3000money!!\nYou will each start with 1000money\nGood luck to both of you! Player one please start your turn");
+//		System.out.println("");
+//		System.out.println("");
+//		System.out.println("Now we have predetermined names for you guys!");
+//		System.out.println("Player 1 will be named: Bojack Horseman");
+//		System.out.println("Player 2 will be named: Richie Rich");
+//		System.out.println("");
 		
 	}
 	
@@ -64,13 +64,13 @@ public class Text {
 		
 	}
 	
-	public void setTurnDescription(Player player, Shaker shake)
+	public static void TurnDescription(Player player, Shaker shake)
 	{
-		turn = player.getPlayerName() + "landed on \n " + getFieldDescription(shake.getShake())  + "\n Dice value: " + shake;
+		System.out.println(player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYour balance is changed by " + getFieldValue(shake.getShake()) + " to:");
 	}
 	
-	public String getTurnDescription()
-	{
-		return turn;
-	}
+//	public String getTurnDescription()
+//	{
+//		return turn;
+//	}
 }
