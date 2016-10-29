@@ -9,9 +9,7 @@ public class Player {
 	//Creation of attributes
 
 	private String nameOfPlayer;
-	private int Balance=1000;
-	private int Bank;
-	private int point;
+	private int Balance;
 	
 	private int MIN=0;
 	
@@ -20,7 +18,7 @@ public class Player {
 	 * @param name Reserves space for the player's name.
 	 * @param point Reserves space for the player's points.
 	 */
-	public Player (String name)
+	public Player (String name, int point)
 	{
 		nameOfPlayer = name;
 		Balance=point;
@@ -45,14 +43,16 @@ public class Player {
 		return nameOfPlayer;
 	}
 	
-	public void setAccount()
+	public void setAccount(int point)
 	{
-		Balance=Balance+fieldValue;
+		Balance=Balance+point;
+		if (Balance <= MIN){
+			Balance=0;
+		}
 	}
 	public int getAccount()
 	{
-		Bank=Balance;
-		return Bank;
+		return Balance;
 	}
 	/**
 	 * Converts the Balance from an int to a string.
@@ -67,37 +67,10 @@ public class Player {
 	* @param currentShakerValue Adds the current shaker points to the total score.
 	* @return
 	*/
-	public int setBalance(int Account)
-	{
-	Balance = Balance + Account;
-	return Balance;
-	}
-	/**
-	* Returns the player's current balance.
-	* @return
-	*/
-	public int getBalance()
-	{
-	return Balance;
-	}
-	/*
-	* Makes sure the player's balance can't get below 0
-	*/
-	public int minBalance()
-	{
-	if (Balance <= MIN){
-		Balance=0;
-	}
-	return Balance;
-	}
-//	/**
-//	* Converts the Balance from an int to a string.
-//	*/
-//	public static String toString(Account print)
-//	{
-//	return Integer.toString(print.Balance);
-//	}
+
 }
+	
+
 	
 
 	
