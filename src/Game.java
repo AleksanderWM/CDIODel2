@@ -4,8 +4,8 @@ public class Game {
 	
 	
 	Text tekst = new Text();
-	private Player player1 = new Player("SutDiller", 1000);
-	private Player player2 = new Player("Bojack", 1000);
+	private Player player1 = new Player("Player one", 1000);
+	private Player player2 = new Player("Player two", 1000);
 	Shaker shake = new Shaker();
 	private Scanner scan = new Scanner(System.in);
 	public int count = 1;
@@ -26,17 +26,16 @@ public class Game {
 		playLoop();
 	}
 	
-	public void landed(Player p)
+	public void landed(Player player)
 	{
-		System.out.print(p.getPlayerName() + " landed on ");
-		System.out.println(tekst.getFieldDescription(shake.getShake()));
-		System.out.println("dice value " + shake.getShake());
+		Text.setTurnDescription(this.Player, this.shake);
+		Text.getTurnDescription();
 	}
 	public void switchens(Player p)
 	{
 		switch(shake.getShake())
 		{
-		case 1: landed(p);
+		case 1: landed(p,Shaker.getShake(),shaker);
 		break;
 		case 2:landed(p);
 		break;

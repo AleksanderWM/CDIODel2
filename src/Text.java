@@ -5,6 +5,8 @@ public class Text {
 	String turn;
 	String end;
 	CustomField hejsa;
+	Player player;
+	Shaker shake;
 
 	CustomField[] fieldDescription =
 		{
@@ -60,5 +62,15 @@ public class Text {
 		System.out.println("You won the game");
 		System.exit(0);
 		
+	}
+	
+	public void setTurnDescription(Player player, Shaker shake)
+	{
+		turn = player.getPlayerName() + "landed on \n " + getFieldDescription(shake.getShake())  + "\n Dice value: " + shake;
+	}
+	
+	public String getTurnDescription()
+	{
+		return turn;
 	}
 }
