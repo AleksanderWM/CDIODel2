@@ -9,19 +9,18 @@ public class Player {
 	//Creation of attributes
 
 	private String nameOfPlayer;
-	Account Account = new Account();
+	private int Balance;
+	
 	/**
 	 * Creates the constructor
 	 * @param name Reserves space for the player's name.
 	 * @param point Reserves space for the player's points.
 	 */
-	public Player (String name, int point)
+	public Player (String name)
 	{
 		nameOfPlayer = name;
-		Account.Balance = point;
-	
+		Balance = 1000;
 	}
-	
 	
 	/**
 	 * Sets the player's name
@@ -30,7 +29,7 @@ public class Player {
 	 */
 	public void setPlayerName(String name)
 	{
-		nameOfPlayer = name;
+		this.nameOfPlayer = name;
 	}
 	
 	/**
@@ -39,24 +38,23 @@ public class Player {
 	 */
 	public String getPlayerName()
 	{
-		return nameOfPlayer;
+		return this.nameOfPlayer;
 	}
 	
-	public void setAccount()
+	public void setAccount(int bogstav)
 	{
-		
+		this.bank.setBalance(bogstav);
 	}
 	public int getAccount()
 	{
-		return Account.Balance;
+		return this.bank.getBalance();
 	}
 	/**
 	 * Converts the Balance from an int to a string.
 	 */
 	public String toString()
 	{
-		String result = Integer.toString(Account.Balance);
-		return result;
+		return Account.toString(this.bank);
 	}
 }
 	
