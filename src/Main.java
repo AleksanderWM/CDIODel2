@@ -1,12 +1,17 @@
 
 public class Main {
 
-	public static void main(String[] args) 
-	
-	{
-		Player player1 = new Player("Player1", 1000);
-		System.out.println(player1.getAccount());
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 
+		Text tekst = new Text();
+		Game gameplay = new Game();
+		
+		
+		gameplay.play();
+		
+		
+		
 	}
 
 }
