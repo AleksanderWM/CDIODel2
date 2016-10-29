@@ -9,7 +9,11 @@ public class Player {
 	//Creation of attributes
 
 	private String nameOfPlayer;
-	private int Balance;
+	private int Balance=1000;
+	private int Bank;
+	private int point;
+	
+	private int MIN=0;
 	
 	/**
 	 * Creates the constructor
@@ -19,7 +23,7 @@ public class Player {
 	public Player (String name)
 	{
 		nameOfPlayer = name;
-		Balance = 1000;
+		Balance=point;
 	}
 	
 	/**
@@ -29,7 +33,7 @@ public class Player {
 	 */
 	public void setPlayerName(String name)
 	{
-		this.nameOfPlayer = name;
+		nameOfPlayer = name;
 	}
 	
 	/**
@@ -38,24 +42,61 @@ public class Player {
 	 */
 	public String getPlayerName()
 	{
-		return this.nameOfPlayer;
+		return nameOfPlayer;
 	}
 	
-	public void setAccount(int bogstav)
+	public void setAccount()
 	{
-		this.bank.setBalance(bogstav);
+		Balance=Balance+fieldValue;
 	}
 	public int getAccount()
 	{
-		return this.bank.getBalance();
+		Bank=Balance;
+		return Bank;
 	}
 	/**
 	 * Converts the Balance from an int to a string.
 	 */
 	public String toString()
 	{
-		return Account.toString(this.bank);
+		return Integer.toString(Balance);
 	}
+		
+	/**
+	* Calculates the player's balance. This is done by having the (int currentShakerValue) added to the score. 
+	* @param currentShakerValue Adds the current shaker points to the total score.
+	* @return
+	*/
+	public int setBalance(int Account)
+	{
+	Balance = Balance + Account;
+	return Balance;
+	}
+	/**
+	* Returns the player's current balance.
+	* @return
+	*/
+	public int getBalance()
+	{
+	return Balance;
+	}
+	/*
+	* Makes sure the player's balance can't get below 0
+	*/
+	public int minBalance()
+	{
+	if (Balance <= MIN){
+		Balance=0;
+	}
+	return Balance;
+	}
+//	/**
+//	* Converts the Balance from an int to a string.
+//	*/
+//	public static String toString(Account print)
+//	{
+//	return Integer.toString(print.Balance);
+//	}
 }
 	
 
