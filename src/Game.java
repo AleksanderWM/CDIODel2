@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Game {
 	
 	
-	Text tekst = new Text();
+	Text text = new Text();
 	private Player player1 = new Player("Player one");
 	private Player player2 = new Player("Player two");
 	Shaker shake = new Shaker();
@@ -21,7 +21,7 @@ public class Game {
 	{
 		
 
-		tekst.startDescription();
+		text.startDescription();
 		playLoop();
 	}
 	
@@ -30,29 +30,29 @@ public class Game {
 	{
 		switch(shake.getShake())
 		{
-		case 1: Text.TurnDescription(p,shake);
+		case 1: text.TurnDescription(p,shake);
 		break;
-		case 2: Text.TurnDescription(p,shake);
+		case 2: text.TurnDescription(p,shake);
 		break;
-		case 3: Text.TurnDescription(p,shake);
+		case 3: text.TurnDescription(p,shake);
 		break;
-		case 4: Text.TurnDescription(p,shake);
+		case 4: text.TurnDescription(p,shake);
 		break;
-		case 5: Text.TurnDescription(p,shake);
+		case 5: text.TurnDescription(p,shake);
 		break;
-		case 6: Text.TurnDescription(p,shake);
+		case 6: text.TurnDescription(p,shake);
 		break;
-		case 7: Text.TurnDescription(p,shake);
+		case 7: text.TurnDescription(p,shake);
 		break;
-		case 8: Text.TurnDescription(p,shake);
+		case 8: text.TurnDescription(p,shake);
 		break;
-		case 9: Text.TurnDescription(p,shake);
+		case 9: text.TurnDescription(p,shake);
 		break;
-		case 10: Text.TurnDescription(p,shake);
+		case 10: text.TurnDescription(p,shake);
 		break;
-		case 11: Text.TurnDescription(p,shake);
+		case 11: text.TurnDescription(p,shake);
 		break;
-		case 12: Text.TurnDescription(p,shake);
+		case 12: text.TurnDescription(p,shake);
 		break;
 		}
 	}
@@ -62,7 +62,7 @@ public class Game {
 		scan.nextLine();
 		shake.setShake();
 		gameResult(p);
-		p.setAccount(Text.getFieldValue(shake.getShake()));
+		p.getAccount().setBalance(Text.getFieldValue(shake.getShake()));
 		shake.resetShake();
 		System.out.println(p.getAccount());
 		
@@ -79,14 +79,17 @@ public class Game {
 			playerTurn(player1);
 			count++;
 			if(rules.ruleWolf(shake) == true)
-				count = 1;
+				{count = 1;}
 			rules(player1);
 			}
+			while(count == 2)
+			{
 			playerTurn(player2);
 			count--;
 			if(rules.ruleWolf(shake) == true)
-				count = 2;
+				{count = 2;}
 			rules(player2);
+			}
 		}
 			
 	}
@@ -94,7 +97,12 @@ public class Game {
 	public void rules(Player player)
 	{
 		if(rules.winner(player) == true)
-			tekst.getEndDescription();
+			{
+			text.getEndDescription();
+			scan.nextLine();
+			System.exit(1);
+			}
+		
 	}
 
 
