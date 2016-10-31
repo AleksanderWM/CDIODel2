@@ -45,6 +45,6 @@ public int minBalance()
  */
 public String toString()
 {
-	return Integer.toString(this.Balance);
+	return Integer.toString(Balance);
 }
 }

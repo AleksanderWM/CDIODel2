@@ -56,7 +56,7 @@ public class Player {
 	 */
 	public String toString()
 	{
-		return Account.toString(myAcc);
+		return nameOfPlayer;
 	}
 		
 	/**
