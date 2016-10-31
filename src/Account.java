@@ -43,8 +43,8 @@ public int minBalance()
 /**
  * Converts the Balance from an int to a string.
  */
-public static String toString(Account print)
+public String toString()
 {
-	return Integer.toString(print.Balance);
+	return Integer.toString(this.Balance);
 }
 }
