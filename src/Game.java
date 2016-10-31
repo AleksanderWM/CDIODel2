@@ -97,7 +97,12 @@ public class Game {
 	public void rules(Player player)
 	{
 		if(rules.winner(player) == true)
+			{
 			text.getEndDescription();
+			scan.nextLine();
+			System.exit(1);
+			}
+		
 	}
 
 
