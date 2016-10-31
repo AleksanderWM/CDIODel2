@@ -9,7 +9,7 @@ public class Player {
 	//Creation of attributes
 
 	private String nameOfPlayer;
-	private int Balance;
+	private Account myAcc;
 	
 	private int MIN=0;
 	
@@ -18,10 +18,10 @@ public class Player {
 	 * @param name Reserves space for the player's name.
 	 * @param point Reserves space for the player's points.
 	 */
-	public Player (String name, int point)
+	public Player (String name)
 	{
 		nameOfPlayer = name;
-		Balance=point;
+		myAcc = new Account();
 	}
 	
 	/**
@@ -43,23 +43,20 @@ public class Player {
 		return nameOfPlayer;
 	}
 	
-	public void setAccount(int point)
+	public Account getAccount()
 	{
-		Balance=Balance+point;
-		if (Balance <= MIN){
-			Balance=0;
-		}
+		return myAcc;
 	}
-	public int getAccount()
-	{
-		return Balance;
-	}
+//	public int getAccountioioio()
+//	{
+//		return Balance;
+//	}
 	/**
 	 * Converts the Balance from an int to a string.
 	 */
 	public String toString()
 	{
-		return Integer.toString(Balance);
+		return Account.toString(myAcc);
 	}
 		
 	/**
