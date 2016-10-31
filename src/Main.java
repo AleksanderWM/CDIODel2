@@ -8,7 +8,7 @@ public class Main {
 		Game gameplay = new Game();
 		
 		
-		gameplay.test();
+		gameplay.play();
 		
 		
 		
