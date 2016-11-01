@@ -12,16 +12,19 @@ public class Rule {
 	
 	public boolean ruleWolf(Shaker shake)
 	{
-		if (shake.getShake() == 9)
+		if (shake.getShake() == 10)
 		{
 			return true;
 		}
-		return false;
+		else
+		{
+			return false;
+		}
 	}
 		
 	public boolean winner(Player player)
 	{
-	if(player.getAccount() > 1500)
+	if(player.getAccount().getBalance() > 3000)
 	{
 	System.out.println(player.getAccount());
 	return true;

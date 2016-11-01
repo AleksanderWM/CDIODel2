@@ -4,7 +4,7 @@ public class Text {
 	String start;
 	String turn;
 	String end;
-	CustomField hejsa;
+	CustomField field;
 	Player player;
 	Shaker shake;
 
@@ -40,13 +40,7 @@ public class Text {
 	public void startDescription()
 	{
 		
-		System.out.println("Hello Players! today we will be playing a game of dices\nThe object of the game is to get 3000money!!\nYou will each start with 1000money\nGood luck to both of you! Player one please start your turn");
-//		System.out.println("");
-//		System.out.println("");
-//		System.out.println("Now we have predetermined names for you guys!");
-//		System.out.println("Player 1 will be named: Bojack Horseman");
-//		System.out.println("Player 2 will be named: Richie Rich");
-//		System.out.println("");
+		System.out.println("Hello Players! today we will be playing a game of dices\nThe object of the game is to get 3000 money!!\nYou will each start with 1000 money\nGood luck to both of you! Player one please start your turn\n");
 		
 	}
 	
@@ -64,13 +58,18 @@ public class Text {
 		
 	}
 	
-	public static void TurnDescription(Player player, Shaker shake)
+	public void TurnDescription(Player player, Shaker shake)
 	{
-		System.out.println(player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYour balance is changed by " + getFieldValue(shake.getShake()) + " to:");
+		if(shake.getShake()!=10)
+			{
+			System.out.println(player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYour balance is changed by " + getFieldValue(shake.getShake()) + " to:");
+			}
+		else
+			{
+			System.out.println(player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYou get an extra turn but your balance is changed by " + getFieldValue(shake.getShake()) + " to:");
+			}
 	}
 	
-//	public String getTurnDescription()
-//	{
-//		return turn;
-//	}
+	
+
 }
