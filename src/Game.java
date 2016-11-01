@@ -11,17 +11,9 @@ public class Game {
 	public int count = 1;
 	Rule rules = new Rule();
 	
-	public Game()
-	{
-		
-	}
-
-
 	public void play()
 	{
-		
-
-		text.startDescription();
+		text.printStartDescription();
 		playLoop();
 	}
 	
@@ -30,29 +22,29 @@ public class Game {
 	{
 		switch(shake.getShake())
 		{
-		case 1: text.TurnDescription(p,shake);
+		case 1: text.turnDescription(p,shake);
 		break;
-		case 2: text.TurnDescription(p,shake);
+		case 2: text.turnDescription(p,shake);
 		break;
-		case 3: text.TurnDescription(p,shake);
+		case 3: text.turnDescription(p,shake);
 		break;
-		case 4: text.TurnDescription(p,shake);
+		case 4: text.turnDescription(p,shake);
 		break;
-		case 5: text.TurnDescription(p,shake);
+		case 5: text.turnDescription(p,shake);
 		break;
-		case 6: text.TurnDescription(p,shake);
+		case 6: text.turnDescription(p,shake);
 		break;
-		case 7: text.TurnDescription(p,shake);
+		case 7: text.turnDescription(p,shake);
 		break;
-		case 8: text.TurnDescription(p,shake);
+		case 8: text.turnDescription(p,shake);
 		break;
-		case 9: text.TurnDescription(p,shake);
+		case 9: text.turnDescription(p,shake);
 		break;
-		case 10: text.TurnDescription(p,shake);
+		case 10: text.turnDescription(p,shake);
 		break;
-		case 11: text.TurnDescription(p,shake);
+		case 11: text.turnDescription(p,shake);
 		break;
-		case 12: text.TurnDescription(p,shake);
+		case 12: text.turnDescription(p,shake);
 		break;
 		}
 	}
@@ -62,8 +54,8 @@ public class Game {
 		scan.nextLine();
 		shake.setShake();
 		gameResult(p);
-		p.getAccount().setBalance(Text.getFieldValue(shake.getShake()));
-		shake.resetShake();
+		p.getAccount().setBalance(text.getFieldValue(shake.getShake()));
+		//shake.resetShake();
 		System.out.println(p.getAccount());
 		
 		
@@ -80,7 +72,7 @@ public class Game {
 			count++;
 			if(rules.ruleWolf(shake) == true)
 				{count = 1;}
-			rules(player1);
+			endGame(player1);
 			}
 			while(count == 2)
 			{
@@ -88,19 +80,19 @@ public class Game {
 			count--;
 			if(rules.ruleWolf(shake) == true)
 				{count = 2;}
-			rules(player2);
+			endGame(player2);
 			}
 		}
 			
 	}
 	
-	public void rules(Player player)
+	public void endGame(Player player)
 	{
 		if(rules.winner(player) == true)
 			{
-			text.getEndDescription();
+			text.printEndDescription();
 			scan.nextLine();
-			System.exit(1);
+			System.exit(0);
 			}
 		
 	}

@@ -1,4 +1,8 @@
-
+/**
+ * The Text class holds and controls all text that may be printed to the user.
+ * The primary reasoning for reserving all text to a specific class is to ease any proces of translation.
+ * @author Emil and Aleksander
+ */
 public class Text {
 	
 	String start;
@@ -8,7 +12,9 @@ public class Text {
 	Player player;
 	Shaker shake;
 
-	static CustomField[] fieldDescription =
+	// Creates an array of CustomFields with their separate descriptions and value.
+	
+	public CustomField[] fieldDescription =
 		{
 			new CustomField(" ", 0),
 			new CustomField(" ", 0),
@@ -25,40 +31,51 @@ public class Text {
 			new CustomField("Goldmine", +650),
 		};
 	
-	public static String getFieldDescription(int point)
+	/**
+	 * @param getFieldDescription Returns the fieldDescription of a single field in response to the array reference
+	 * @param point the reference to the fields reference in the constructed array
+	 */
+	public String getFieldDescription(int point)
 	{ 
 		
 		return fieldDescription[point].getFieldText();
 		
 	}
-	public static int getFieldValue(int point)
+	
+	/**
+	 * @param getFieldValue Returns the fieldVaule of a single field in response to the array reference
+	 * @param point the reference to the fields reference in the constructed array
+	 */
+	public int getFieldValue(int point)
 	{
 		return fieldDescription[point].getValue();
 	}
 
-	
-	public void startDescription()
+	/**
+	 * @param printStartDescription prints the introduction text described in the method
+	 */
+	public void printStartDescription()
 	{
 		
 		System.out.println("Hello Players! today we will be playing a game of dices\nThe object of the game is to get 3000 money!!\nYou will each start with 1000 money\nGood luck to both of you! Player one please start your turn\n");
 		
 	}
-	
-	public String getStartdDescription()
+
+	/**
+	 * @param printEndDescription prints the conclusion text described in the method
+	 */
+	public void printEndDescription()
 	{
-		return start;
+		System.out.println("You won the game");
 		
 	}
 
-	
-	public void getEndDescription()
-	{
-		System.out.println("You won the game");
-		System.exit(0);
-		
-	}
-	
-	public void TurnDescription(Player player, Shaker shake)
+	/**
+	 * @param turnDescription prints the dynamic text to the player informing of the actions being done on the specific turn
+	 * @param player the Player object of whom the turn description shall be printed
+	 * @param shake the Shake object signifying the dice roll of the turn
+	 */
+	public void turnDescription(Player player, Shaker shake)
 	{
 		if(shake.getShake()!=10)
 			{

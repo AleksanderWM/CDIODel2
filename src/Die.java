@@ -1,7 +1,7 @@
 public class Die 
 {
-	private final static int MAX = 6; 	// Maximum face value
-	private static int faceValue;
+	private final int MAX = 6; 	// Maximum face value
+	private int faceValue;
 
 	// Constructor
 	public Die()	
@@ -11,13 +11,13 @@ public class Die
 	
 	
 	//Method for rolling die to achieve random face value
-	public static void setRoll()
+	public void setRoll()
 	{
 		faceValue = (int)(Math.random() * MAX) + 1;
 	}
 	
 	//Set roll to a defined value
-	public static int getRoll()
+	public int getRoll()
 	{			
 		return faceValue;
 	}
