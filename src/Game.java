@@ -10,6 +10,7 @@ public class Game {
 	private Scanner scan = new Scanner(System.in);
 	public int count = 1;
 	Rule rules = new Rule();
+	MUI mui = new MUI();
 	
 	/**
 	 * @param play Starts the method playLoop, thereby starting the game
@@ -17,10 +18,11 @@ public class Game {
 	public void play()
 	{
 		text.printStartDescription();
+		mui.createBoard(text);
 		playLoop();
 	}
 	
-/**
+/**e
  * @param p the Player object with the current turn
  * @param gameResult Calls the turnDescription method, thereby printing the result of the turn to the player
  */
@@ -64,13 +66,12 @@ public class Game {
 		System.out.println(p.getPlayerName() + ", please roll the dice");
 		scan.nextLine();
 		shake.setShake();
-		gameResult(p);
+		mui.setDice(shake);
 		p.getAccount().setBalance(text.getFieldValue(shake.getShake()));
+		gameResult(p);
+		mui.displayTurnDescription(text,p,shake);
 		shake.resetShake();
-		System.out.println(p.getAccount());
-		
-		
-		
+			
 	}
 	
 	/**

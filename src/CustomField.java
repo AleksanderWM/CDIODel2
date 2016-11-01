@@ -26,9 +26,14 @@ public class CustomField {
 		fieldValue = values;
 	}
 	
-	public int getValue()
+	public int getValueInt()
 	{
 		return fieldValue;
 		
+	}
+	
+	public String getValueString()
+	{
+		return Integer.toString(fieldValue);
 	}
 }

@@ -14,7 +14,7 @@ public class Text {
 
 	// Creates an array of CustomFields with their separate descriptions and value.
 	
-	public CustomField[] fieldDescription =
+	public CustomField[] fieldArray =
 		{
 			new CustomField(" ", 0),
 			new CustomField(" ", 0),
@@ -38,7 +38,7 @@ public class Text {
 	public String getFieldDescription(int point)
 	{ 
 		
-		return fieldDescription[point].getFieldText();
+		return fieldArray[point].getFieldText();
 		
 	}
 	
@@ -48,7 +48,7 @@ public class Text {
 	 */
 	public int getFieldValue(int point)
 	{
-		return fieldDescription[point].getValue();
+		return fieldArray[point].getValueInt();
 	}
 
 	/**
@@ -79,14 +79,25 @@ public class Text {
 	{
 		if(shake.getShake()!=10)
 			{
-			System.out.println(player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYour balance is changed by " + getFieldValue(shake.getShake()) + " to:");
+			System.out.println(player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYour balance is changed by " + getFieldValue(shake.getShake()) + " to:" + player.getAccount().toString());
 			}
 		else
 			{
-			System.out.println(player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYou get an extra turn but your balance is changed by " + getFieldValue(shake.getShake()) + " to:");
+			System.out.println(player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYou get an extra turn but your balance is changed by " + getFieldValue(shake.getShake()) + " to:" + player.getAccount().toString());
 			}
 	}
 	
+	public String getTurnDescription(Player player, Shaker shake)
+	{
+		if(shake.getShake()!=10)
+			{
+			return player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYour balance is changed by " + getFieldValue(shake.getShake()) + " to:" + player.getAccount().toString();
+			}
+		else
+			{
+			return player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYou get an extra turn but your balance is changed by " + getFieldValue(shake.getShake()) + " to:" + player.getAccount().toString();
+			}
+	}
 	
 
 }
