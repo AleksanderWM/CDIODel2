@@ -62,11 +62,19 @@ public class MUI
 	}
 	
 	/**
+	 * 
+	 * @param setCarOnStart sets the car on the start field again.
+	 */
+	public void setCarOnStart(Player player)
+	{
+		GUI.setCar(1, player.getPlayerName());
+	}
+	/**
 	 * @param removeCar Removes a car on a given field position (-1) on the board
 	 */
 	public void removeCar(Player player,Shaker shaker)
 	{
-		GUI.removeCar(shaker.getShake()+1,player.getPlayerName());
+		GUI.removeAllCars(player.getPlayerName());
 	}
 	
 	/**

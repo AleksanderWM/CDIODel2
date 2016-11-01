@@ -68,7 +68,6 @@ public class Game {
 	{
 		System.out.println(p.getPlayerName() + ", please roll the dice");
 		scan.nextLine();
-		shaker.resetShake();
 		mui.removeCar(p, shaker);
 		shaker.setShake();
 		p.getAccount().setBalance(text.getFieldValue(shaker.getShake()));
@@ -79,8 +78,7 @@ public class Game {
 		mui.displayTurnDescription(text,p,shaker);
 		scan.nextLine();
 		mui.removeCar(p, shaker);
-		shaker.resetShake();
-		mui.setCar(p, shaker);
+		mui.setCarOnStart(p);
 			
 	}
 	
