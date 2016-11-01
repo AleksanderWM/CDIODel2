@@ -6,10 +6,6 @@ public class MUI
 
 
 {
-	Text text;
-	Shaker shaker;
-	Player player;
-	
 	
 	public void createBoard(Text text)
 	{
@@ -30,11 +26,29 @@ public class MUI
 	GUI.create(fields);
 	}
 	
+	public void addPlayer(Player player)
+	{
+		GUI.addPlayer(player.getPlayerName(), player.getAccount().getBalance());
+	}
+	
+	public void setBalance(Player player)
+	{
+		GUI.setBalance(player.getPlayerName(), player.getAccount().getBalance());
+	}
 	public void setDice(Shaker shaker)
 	{
 		GUI.setDice(shaker.getDie1(), shaker.getDie2());
 	}
 	
+	public void setCar(Player player,Shaker shaker)
+	{
+		GUI.setCar(shaker.getShake()+1, player.getPlayerName());
+	}
+	
+	public void removeCar(Player player,Shaker shaker)
+	{
+		GUI.removeCar(shaker.getShake()+1,player.getPlayerName());
+	}
 	public void displayTurnDescription(Text text,Player player,Shaker shaker)
 	{
 		

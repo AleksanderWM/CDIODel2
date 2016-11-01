@@ -6,7 +6,7 @@ public class Game {
 	Text text = new Text();
 	private Player player1 = new Player("Player one");
 	private Player player2 = new Player("Player two");
-	Shaker shake = new Shaker();
+	Shaker shaker = new Shaker();
 	private Scanner scan = new Scanner(System.in);
 	public int count = 1;
 	Rule rules = new Rule();
@@ -19,6 +19,11 @@ public class Game {
 	{
 		text.printStartDescription();
 		mui.createBoard(text);
+		mui.addPlayer(player1);
+		mui.addPlayer(player2);
+//		shaker.resetShake();
+//		mui.setCar(player1, shaker);
+//		mui.setCar(player2, shaker);
 		playLoop();
 	}
 	
@@ -28,31 +33,31 @@ public class Game {
  */
 	public void gameResult(Player p)
 	{
-		switch(shake.getShake())
+		switch(shaker.getShake())
 		{
-		case 1: text.turnDescription(p,shake);
+		case 1: text.turnDescription(p,shaker);
 		break;
-		case 2: text.turnDescription(p,shake);
+		case 2: text.turnDescription(p,shaker);
 		break;
-		case 3: text.turnDescription(p,shake);
+		case 3: text.turnDescription(p,shaker);
 		break;
-		case 4: text.turnDescription(p,shake);
+		case 4: text.turnDescription(p,shaker);
 		break;
-		case 5: text.turnDescription(p,shake);
+		case 5: text.turnDescription(p,shaker);
 		break;
-		case 6: text.turnDescription(p,shake);
+		case 6: text.turnDescription(p,shaker);
 		break;
-		case 7: text.turnDescription(p,shake);
+		case 7: text.turnDescription(p,shaker);
 		break;
-		case 8: text.turnDescription(p,shake);
+		case 8: text.turnDescription(p,shaker);
 		break;
-		case 9: text.turnDescription(p,shake);
+		case 9: text.turnDescription(p,shaker);
 		break;
-		case 10: text.turnDescription(p,shake);
+		case 10: text.turnDescription(p,shaker);
 		break;
-		case 11: text.turnDescription(p,shake);
+		case 11: text.turnDescription(p,shaker);
 		break;
-		case 12: text.turnDescription(p,shake);
+		case 12: text.turnDescription(p,shaker);
 		break;
 		}
 	}
@@ -65,12 +70,15 @@ public class Game {
 	{
 		System.out.println(p.getPlayerName() + ", please roll the dice");
 		scan.nextLine();
-		shake.setShake();
-		mui.setDice(shake);
-		p.getAccount().setBalance(text.getFieldValue(shake.getShake()));
+		mui.removeCar(p, shaker);
+		shaker.setShake();
+		p.getAccount().setBalance(text.getFieldValue(shaker.getShake()));
+		mui.setDice(shaker);
+		mui.setBalance(p);
+		mui.setCar(p, shaker);
 		gameResult(p);
-		mui.displayTurnDescription(text,p,shake);
-		shake.resetShake();
+		mui.displayTurnDescription(text,p,shaker);
+		shaker.resetShake();
 			
 	}
 	
@@ -85,7 +93,7 @@ public class Game {
 			{
 			playerTurn(player1);
 			count++;
-			if(rules.ruleWolf(shake) == true)
+			if(rules.ruleWolf(shaker) == true)
 				{count = 1;}
 			endGame(player1);
 			}
@@ -93,7 +101,7 @@ public class Game {
 			{
 			playerTurn(player2);
 			count--;
-			if(rules.ruleWolf(shake) == true)
+			if(rules.ruleWolf(shaker) == true)
 				{count = 2;}
 			endGame(player2);
 			}

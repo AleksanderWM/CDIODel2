@@ -4,13 +4,7 @@
  * @author Emil and Aleksander
  */
 public class Text {
-	
-	String start;
-	String turn;
-	String end;
-	CustomField field;
-	Player player;
-	Shaker shake;
+
 
 	// Creates an array of CustomFields with their separate descriptions and value.
 	

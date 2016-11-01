@@ -1,18 +1,10 @@
 
 public class Rule {
 	
-	Shaker shake = new Shaker();
 	
-
-
-	
-
-	
-	
-	
-	public boolean ruleWolf(Shaker shake)
+	public boolean ruleWolf(Shaker shaker)
 	{
-		if (shake.getShake() == 10)
+		if (shaker.getShake() == 10)
 		{
 			return true;
 		}
