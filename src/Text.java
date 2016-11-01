@@ -1,6 +1,6 @@
 /**
  * The Text class holds and controls all text that may be printed to the user.
- * The primary reasoning for reserving all text to a specific class is to ease any proces of translation.
+ * The primary reasoning for reserving all text to a specific class is to ease any process of translation.
  * @author Emil and Aleksander
  */
 public class Text {
