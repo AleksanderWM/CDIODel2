@@ -6,7 +6,10 @@ public class MUI
 
 
 {
-	
+	/**
+	 * @param createBoard Creates the GUI with a set of 13 fields difined by the fieldArray from Text
+	 * @param text The Text class where the fieldArray is located
+	 */
 	public void createBoard(Text text)
 	{
 	Field[] fields = new Field[13];
@@ -26,29 +29,49 @@ public class MUI
 	GUI.create(fields);
 	}
 	
+	/**
+	 * @param addPlayer Adds a player to the board
+	 */
 	public void addPlayer(Player player)
 	{
 		GUI.addPlayer(player.getPlayerName(), player.getAccount().getBalance());
 	}
 	
+	/**
+	 * @param setBalance Shows the Balance of a player on the board
+	 */
 	public void setBalance(Player player)
 	{
 		GUI.setBalance(player.getPlayerName(), player.getAccount().getBalance());
 	}
+	
+	/**
+	 * @param setDice Shows to dice with given integer values at a random position on the board
+	 */
 	public void setDice(Shaker shaker)
 	{
 		GUI.setDice(shaker.getDie1(), shaker.getDie2());
 	}
 	
+	/**
+	 * @param setCar Sets a car on a given field position (-1) on the board
+	 */
 	public void setCar(Player player,Shaker shaker)
 	{
 		GUI.setCar(shaker.getShake()+1, player.getPlayerName());
 	}
 	
+	/**
+	 * @param removeCar Removes a car on a given field position (-1) on the board
+	 */
 	public void removeCar(Player player,Shaker shaker)
 	{
 		GUI.removeCar(shaker.getShake()+1,player.getPlayerName());
 	}
+	
+	/**
+	 * @param displayTurnDescription Shows a description of the actions performed on a turn in the middle of the board
+	 */
 	public void displayTurnDescription(Text text,Player player,Shaker shaker)
 	{
 		

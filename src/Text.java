@@ -16,12 +16,12 @@ public class Text {
 			new CustomField("Crater", -100),
 			new CustomField("Palace Gates", +100),
 			new CustomField("Cold Desert", -20),
-			new CustomField("Walled city", +180),
+			new CustomField("Walled City", +180),
 			new CustomField("Monastery", 0),
 			new CustomField("Black cave", -70),
 			new CustomField("Huts in the mountain", +60),
 			new CustomField("The Werewall", -80),
-			new CustomField("The pit", -50),
+			new CustomField("The Pit", -50),
 			new CustomField("Goldmine", +650),
 		};
 	
@@ -51,7 +51,7 @@ public class Text {
 	public void printStartDescription()
 	{
 		
-		System.out.println("Hello Players! today we will be playing a game of dices\nThe object of the game is to get 3000 money!!\nYou will each start with 1000 money\nGood luck to both of you! Player one please start your turn\n");
+		System.out.println("Hello Players! today we will be playing a game of dices\nThe object of the game is to get 3000 money!!\nYou will each start with 1000 money\nGood luck to both of you!\nPlayer one please start your turn\n");
 		
 	}
 
@@ -85,11 +85,11 @@ public class Text {
 	{
 		if(shake.getShake()!=10)
 			{
-			return player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYour balance is changed by " + getFieldValue(shake.getShake()) + " to:" + player.getAccount().toString();
+			return player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYour balance is changed by " + getFieldValue(shake.getShake()) + " to:\n" + player.getAccount().toString();
 			}
 		else
 			{
-			return player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYou get an extra turn but your balance is changed by " + getFieldValue(shake.getShake()) + " to:" + player.getAccount().toString();
+			return player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYou get an extra turn but your balance is changed by " + getFieldValue(shake.getShake()) + " to:\n" + player.getAccount().toString();
 			}
 	}
 	

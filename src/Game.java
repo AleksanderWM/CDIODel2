@@ -21,9 +21,8 @@ public class Game {
 		mui.createBoard(text);
 		mui.addPlayer(player1);
 		mui.addPlayer(player2);
-//		shaker.resetShake();
-//		mui.setCar(player1, shaker);
-//		mui.setCar(player2, shaker);
+		mui.setCar(player1, shaker);
+		mui.setCar(player2, shaker);
 		playLoop();
 	}
 	
@@ -35,30 +34,29 @@ public class Game {
 	{
 		switch(shaker.getShake())
 		{
-		case 1: text.turnDescription(p,shaker);
+		case 2: System.out.print(text.getTurnDescription(p,shaker));
 		break;
-		case 2: text.turnDescription(p,shaker);
+		case 3: System.out.print(text.getTurnDescription(p,shaker));
 		break;
-		case 3: text.turnDescription(p,shaker);
+		case 4: System.out.print(text.getTurnDescription(p,shaker));
 		break;
-		case 4: text.turnDescription(p,shaker);
+		case 5: System.out.print(text.getTurnDescription(p,shaker));
 		break;
-		case 5: text.turnDescription(p,shaker);
+		case 6: System.out.print(text.getTurnDescription(p,shaker));
 		break;
-		case 6: text.turnDescription(p,shaker);
+		case 7: System.out.print(text.getTurnDescription(p,shaker));
 		break;
-		case 7: text.turnDescription(p,shaker);
+		case 8: System.out.print(text.getTurnDescription(p,shaker));
 		break;
-		case 8: text.turnDescription(p,shaker);
+		case 9: System.out.print(text.getTurnDescription(p,shaker));
 		break;
-		case 9: text.turnDescription(p,shaker);
+		case 10: System.out.print(text.getTurnDescription(p,shaker));
 		break;
-		case 10: text.turnDescription(p,shaker);
+		case 11: System.out.print(text.getTurnDescription(p,shaker));
 		break;
-		case 11: text.turnDescription(p,shaker);
+		case 12: System.out.print(text.getTurnDescription(p,shaker));
 		break;
-		case 12: text.turnDescription(p,shaker);
-		break;
+		
 		}
 	}
 	
@@ -70,6 +68,7 @@ public class Game {
 	{
 		System.out.println(p.getPlayerName() + ", please roll the dice");
 		scan.nextLine();
+		shaker.resetShake();
 		mui.removeCar(p, shaker);
 		shaker.setShake();
 		p.getAccount().setBalance(text.getFieldValue(shaker.getShake()));
@@ -78,7 +77,10 @@ public class Game {
 		mui.setCar(p, shaker);
 		gameResult(p);
 		mui.displayTurnDescription(text,p,shaker);
+		scan.nextLine();
+		mui.removeCar(p, shaker);
 		shaker.resetShake();
+		mui.setCar(p, shaker);
 			
 	}
 	
