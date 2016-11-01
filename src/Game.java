@@ -11,13 +11,19 @@ public class Game {
 	public int count = 1;
 	Rule rules = new Rule();
 	
+	/**
+	 * @param play Starts the method playLoop, thereby starting the game
+	 */
 	public void play()
 	{
 		text.printStartDescription();
 		playLoop();
 	}
 	
-
+/**
+ * @param p the Player object with the current turn
+ * @param gameResult Calls the turnDescription method, thereby printing the result of the turn to the player
+ */
 	public void gameResult(Player p)
 	{
 		switch(shake.getShake())
@@ -48,6 +54,11 @@ public class Game {
 		break;
 		}
 	}
+	
+	/**
+	 * @param playerTurn perform a single turn by rolling the dice, setting the balance and returning all relevant info in correspondence to the current player
+	 * @param p the current player performing a turn
+	 */
 	public void playerTurn(Player p)
 	{
 		System.out.println(p.getPlayerName() + ", please roll the dice");
@@ -55,13 +66,16 @@ public class Game {
 		shake.setShake();
 		gameResult(p);
 		p.getAccount().setBalance(text.getFieldValue(shake.getShake()));
-		//shake.resetShake();
+		shake.resetShake();
 		System.out.println(p.getAccount());
 		
 		
 		
 	}
 	
+	/**
+	 * @param playLoop The Game instance itself. Takes alternating turns for the two players as long a no player fulfills the winning condition
+	 */
 	public void playLoop()
 	{
 		while(count < 4)
@@ -86,6 +100,10 @@ public class Game {
 			
 	}
 	
+	/**
+	 * @param endGame if the winning condition is fulfilled in the playLoop method, this method is called, printing an endDescription and termination the game.
+	 * @param player the player object
+	 */
 	public void endGame(Player player)
 	{
 		if(rules.winner(player) == true)

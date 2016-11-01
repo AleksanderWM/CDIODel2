@@ -63,9 +63,9 @@ public class Shaker {
 		
 		
 	}
-//	public void resetShake()
-//	{
-//		shakeValue = 0;
-//				
-//	}
+	public void resetShake()
+	{
+		shakeValue = 0;
+				
+	}
 }

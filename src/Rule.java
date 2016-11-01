@@ -24,7 +24,7 @@ public class Rule {
 		
 	public boolean winner(Player player)
 	{
-	if(player.getAccount().getBalance() > 3000)
+	if(player.getAccount().getBalance() >= 3000)
 	{
 	System.out.println(player.getAccount());
 	return true;
