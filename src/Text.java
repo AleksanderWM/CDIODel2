@@ -11,18 +11,18 @@ public class Text {
 	public CustomField[] fieldArray =
 		{
 			new CustomField(" ", 0, " "),
-			new CustomField(" ", 0, "BridgeIcon.png"),
-			new CustomField("Tower", 250,"TowerIcon.jpg"),
-			new CustomField("Crater", -100,"CraterIcon.jpg"),
-			new CustomField("Palace Gates", +100,"PalaceGatesIcon.jpg"),
-			new CustomField("Cold Desert", -20,"ColdDesertIcon.jpg"),
-			new CustomField("Walled City", +180,"WalledCityIcon.jpg"),
-			new CustomField("Monastery", 0,"MonasteryIcon.jpg"),
-			new CustomField("Black cave", -70,"BlackCaveIcon.jpg"),
-			new CustomField("Huts in the mountain", +60,"MountainHutIcon.jpg"),
-			new CustomField("The Werewall", -80,"WareWallIcon.jpg"),
-			new CustomField("The Pit", -50,"PitIcon.jpg"),
-			new CustomField("Goldmine", +650,"GoldmineIcon.jpg"),
+			new CustomField(" ", 0, "icons/BridgeIcon.png"),
+			new CustomField("Tower", 250,"icons/TowerIcon.jpg"),
+			new CustomField("Crater", -100,"icons/CraterIcon.jpg"),
+			new CustomField("Palace Gates", +100,"icons/PalaceGatesIcon.jpg"),
+			new CustomField("Cold Desert", -20,"icons/ColdDesertIcon.jpg"),
+			new CustomField("Walled City", +180,"icons/WalledCityIcon.jpg"),
+			new CustomField("Monastery", 0,"icons/MonasteryIcon.jpg"),
+			new CustomField("Black cave", -70,"icons/BlackCaveIcon.jpg"),
+			new CustomField("Huts in the mountain", +60,"icons/MountainHutIcon.jpg"),
+			new CustomField("The Werewall", -80,"icons/WareWallIcon.jpg"),
+			new CustomField("The Pit", -50,"icons/PitIcon.jpg"),
+			new CustomField("Goldmine", +650,"icons/GoldmineIcon.jpg"),
 		};
 	
 	/**
