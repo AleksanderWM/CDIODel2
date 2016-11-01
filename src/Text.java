@@ -10,19 +10,19 @@ public class Text {
 	
 	public CustomField[] fieldArray =
 		{
-			new CustomField(" ", 0),
-			new CustomField(" ", 0),
-			new CustomField("Tower", 250),
-			new CustomField("Crater", -100),
-			new CustomField("Palace Gates", +100),
-			new CustomField("Cold Desert", -20),
-			new CustomField("Walled City", +180),
-			new CustomField("Monastery", 0),
-			new CustomField("Black cave", -70),
-			new CustomField("Huts in the mountain", +60),
-			new CustomField("The Werewall", -80),
-			new CustomField("The Pit", -50),
-			new CustomField("Goldmine", +650),
+			new CustomField(" ", 0, " "),
+			new CustomField(" ", 0, "BridgeIcon.png"),
+			new CustomField("Tower", 250,"TowerIcon.jpg"),
+			new CustomField("Crater", -100,"CraterIcon.jpg"),
+			new CustomField("Palace Gates", +100,"PalaceGatesIcon.jpg"),
+			new CustomField("Cold Desert", -20,"ColdDesertIcon.jpg"),
+			new CustomField("Walled City", +180,"WalledCityIcon.jpg"),
+			new CustomField("Monastery", 0,"MonasteryIcon.jpg"),
+			new CustomField("Black cave", -70,"BlackCaveIcon.jpg"),
+			new CustomField("Huts in the mountain", +60,"MountainHutIcon.jpg"),
+			new CustomField("The Werewall", -80,"WareWallIcon.jpg"),
+			new CustomField("The Pit", -50,"PitIcon.jpg"),
+			new CustomField("Goldmine", +650,"GoldmineIcon.jpg"),
 		};
 	
 	/**
@@ -43,6 +43,11 @@ public class Text {
 	public int getFieldValue(int point)
 	{
 		return fieldArray[point].getValueInt();
+	}
+	
+	public String getPicture(int point)
+	{
+		return fieldArray[point].getPicture();
 	}
 
 	/**
