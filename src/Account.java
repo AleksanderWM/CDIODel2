@@ -21,6 +21,7 @@ public Account()
 public int setBalance(int point)
 {
 	Balance = Balance + point;
+	minBalance();
 	return Balance;
 }
 
