@@ -1,18 +1,10 @@
 
 public class Rule {
 	
-	Shaker shake = new Shaker();
 	
-
-
-	
-
-	
-	
-	
-	public boolean ruleWolf(Shaker shake)
+	public boolean ruleWolf(Shaker shaker)
 	{
-		if (shake.getShake() == 10)
+		if (shaker.getShake() == 10)
 		{
 			return true;
 		}
@@ -24,7 +16,7 @@ public class Rule {
 		
 	public boolean winner(Player player)
 	{
-	if(player.getAccount().getBalance() > 3000)
+	if(player.getAccount().getBalance() >= 3000)
 	{
 	System.out.println(player.getAccount());
 	return true;

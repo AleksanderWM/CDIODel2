@@ -4,6 +4,9 @@ public class Account {
 	private int Balance;
 	private int MIN=0;
 
+	/**
+	 * @param Account Constructor. Creates an Account object with the inital balance of 1000
+	 */
 public Account()	
 {
 		Balance = 1000;
@@ -12,7 +15,8 @@ public Account()
 /**
  * Calculates the player's balance. This is done by having the (int currentShakerValue) added to the score. 
  * @param currentShakerValue Adds the current shaker points to the total score.
- * @return
+ * @param point the integer value to be added to the balance.
+ * @return Balance
  */
 public int setBalance(int point)
 {
@@ -22,7 +26,7 @@ public int setBalance(int point)
 
 /**
  * Returns the player's current balance.
- * @return
+ * @return Balance
  */
 public int getBalance()
 {
@@ -31,7 +35,6 @@ public int getBalance()
 /*
  * Makes sure the player's balance can't get below 0
  */
-
 public int minBalance()
 {
 	if (Balance <= MIN){
@@ -39,9 +42,8 @@ public int minBalance()
 	}
 	return Balance;
 }
-
 /**
- * Converts the Balance from an int to a string.
+ * Converts the Balance from an integer to a string.
  */
 public String toString()
 {

@@ -11,8 +11,6 @@ public class Player {
 	private String nameOfPlayer;
 	private Account myAcc;
 	
-	private int MIN=0;
-	
 	/**
 	 * Creates the constructor
 	 * @param name Reserves space for the player's name.
@@ -47,12 +45,9 @@ public class Player {
 	{
 		return myAcc;
 	}
-//	public int getAccountioioio()
-//	{
-//		return Balance;
-//	}
+	
 	/**
-	 * Converts the Balance from an int to a string.
+	 * Converts the Balance from an integer to a string.
 	 */
 	public String toString()
 	{
