@@ -1,3 +1,4 @@
+package main;
 /**
  * The Text class holds and controls all text that may be printed to the user.
  * The primary reasoning for reserving all text to a specific class is to ease any process of translation.

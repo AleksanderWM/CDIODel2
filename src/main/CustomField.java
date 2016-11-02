@@ -1,4 +1,4 @@
-
+package main;
 public class CustomField {
 	
 	private String fieldDescription;
@@ -10,7 +10,6 @@ public class CustomField {
 		fieldDescription = description;
 		fieldValue = value;
 		fieldPicture = picture;
-		
 	}
 	
 	public void setFieldText(String teksten)

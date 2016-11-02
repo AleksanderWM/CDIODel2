@@ -1,3 +1,4 @@
+package main;
 public class Die 
 {
 	private final int MAX = 6; 	// Maximum face value
@@ -8,7 +9,6 @@ public class Die
 	{
 		faceValue = 0;
 	}
-	
 	
 	//Method for rolling die to achieve random face value
 	public void setRoll()

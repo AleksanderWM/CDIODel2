@@ -1,3 +1,4 @@
+package main;
 import desktop_resources.GUI;
 import java.awt.Color;
 import desktop_fields.Refuge;
@@ -5,7 +6,6 @@ import desktop_fields.Field;
 import desktop_fields.Start;
 
 public class MUI 
-
 
 {
 	Color Basecolor = new Color(51, 204, 0);
@@ -210,5 +210,4 @@ GUI.create(fields);
 		removeCar(player, shaker);
 		setCarOnStart(player);
 	}
-	
 }

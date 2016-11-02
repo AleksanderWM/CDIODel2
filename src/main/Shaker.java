@@ -1,3 +1,4 @@
+package main;
 /**
  * @author Aleksander and Morten N
  * Edited by Emil and Nick
@@ -60,12 +61,9 @@ public class Shaker {
 	public String toString()
 	{
 		return Integer.toString(shakeValue);
-		
-		
 	}
 	public void resetShake()
 	{
 		shakeValue = 0;
-				
 	}
 }

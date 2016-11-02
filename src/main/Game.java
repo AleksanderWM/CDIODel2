@@ -1,6 +1,5 @@
-
+package main;
 public class Game {
-	
 	
 	Text text = new Text();
 	private Player player1 = new Player("Player one");
@@ -25,7 +24,6 @@ public class Game {
 		playLoop();
 	}
 
-	
 	/**
 	 * @param playerTurn perform a single turn by rolling the dice, setting the balance and returning all relevant info in correspondence to the current player
 	 * @param player the current player performing a turn
@@ -77,8 +75,5 @@ public class Game {
 			
 			System.exit(0);
 			}
-		
 	}
-
-
 }
