@@ -1,14 +1,15 @@
 public class Die 
 {
-	private final int MAX = 6; 	// Maximum face value
-	private int faceValue;
+	private final static int MAX = 6; 	// Maximum face value
+	private static int faceValue;
 
 	// Constructor
 	public Die()	
 	{
 		faceValue = 0;
 	}
-
+	
+	
 	//Method for rolling die to achieve random face value
 	public void setRoll()
 	{
