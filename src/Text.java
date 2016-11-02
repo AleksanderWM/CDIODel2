@@ -53,19 +53,19 @@ public class Text {
 	/**
 	 * @param printStartDescription prints the introduction text described in the method
 	 */
-	public void printStartDescription()
+	public String getStartDescription()
 	{
 		
-		System.out.println("Hello Players! today we will be playing a game of dices\nThe object of the game is to get 3000 money!!\nYou will each start with 1000 money\nGood luck to both of you!\nPlayer one please start your turn\n");
+		return ("Hello Players! Today we will be playing a game of dices\nThe object of the game is to get 3000 money!!\nYou will each start with 1000 money\nGood luck to both of you!\nPlayer one please start your turn\n");
 		
 	}
 
 	/**
 	 * @param printEndDescription prints the conclusion text described in the method
 	 */
-	public void printEndDescription()
+	public String getEndDescription()
 	{
-		System.out.println("You won the game");
+		return "You won the game";
 		
 	}
 

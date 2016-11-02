@@ -161,9 +161,18 @@ GUI.create(fields);
 	/**
 	 * @param displayTurnDescription Shows a description of the actions performed on a turn in the middle of the board
 	 */
-	public void displayTurnDescription(Text text,Player player,Shaker shaker)
+	public void displayMidDescription(String text)
 	{
 		
-		GUI.displayChanceCard(text.getTurnDescription(player, shaker));
+		GUI.displayChanceCard(text);
+	}
+//	public void displayMidDescription(String text)
+//	{
+//		
+//		GUI.displayChanceCard(text);
+//	}
+	public void button(String msg,String button)
+	{
+		GUI.getUserButtonPressed(msg, button);
 	}
 }

@@ -17,48 +17,16 @@ public class Game {
 	 */
 	public void play()
 	{
-		text.printStartDescription();
 		mui.createBoard(text);
 		mui.addPlayer(player1);
 		mui.addPlayer(player2);
 		mui.setCar(player1, shaker);
 		mui.setCar(player2, shaker);
+		mui.displayMidDescription(text.getStartDescription());
+		mui.button("Welcome", "Start Game");
 		playLoop();
 	}
-	
-/**e
- * @param p the Player object with the current turn
- * @param gameResult Calls the turnDescription method, thereby printing the result of the turn to the player
- */
-	public void gameResult(Player p)
-	{
-		switch(shaker.getShake())
-		{
-		case 2: System.out.print(text.getTurnDescription(p,shaker));
-		break;
-		case 3: System.out.print(text.getTurnDescription(p,shaker));
-		break;
-		case 4: System.out.print(text.getTurnDescription(p,shaker));
-		break;
-		case 5: System.out.print(text.getTurnDescription(p,shaker));
-		break;
-		case 6: System.out.print(text.getTurnDescription(p,shaker));
-		break;
-		case 7: System.out.print(text.getTurnDescription(p,shaker));
-		break;
-		case 8: System.out.print(text.getTurnDescription(p,shaker));
-		break;
-		case 9: System.out.print(text.getTurnDescription(p,shaker));
-		break;
-		case 10: System.out.print(text.getTurnDescription(p,shaker));
-		break;
-		case 11: System.out.print(text.getTurnDescription(p,shaker));
-		break;
-		case 12: System.out.print(text.getTurnDescription(p,shaker));
-		break;
-		
-		}
-	}
+
 	
 	/**
 	 * @param playerTurn perform a single turn by rolling the dice, setting the balance and returning all relevant info in correspondence to the current player
@@ -66,17 +34,16 @@ public class Game {
 	 */
 	public void playerTurn(Player p)
 	{
-		System.out.println(p.getPlayerName() + ", please roll the dice");
-		scan.nextLine();
+		mui.displayMidDescription(p.getPlayerName() + "'s Turn!");
+		mui.button(p.getPlayerName(),"Take Turn");
 		mui.removeCar(p, shaker);
 		shaker.setShake();
 		p.getAccount().setBalance(text.getFieldValue(shaker.getShake()));
 		mui.setDice(shaker);
 		mui.setBalance(p);
 		mui.setCar(p, shaker);
-		gameResult(p);
-		mui.displayTurnDescription(text,p,shaker);
-		scan.nextLine();
+		mui.displayMidDescription(text.getTurnDescription(p, shaker));
+		mui.button(p.getPlayerName(),"End Turn");
 		mui.removeCar(p, shaker);
 		mui.setCarOnStart(p);
 			
@@ -117,8 +84,8 @@ public class Game {
 	{
 		if(rules.winner(player) == true)
 			{
-			text.printEndDescription();
-			scan.nextLine();
+			mui.displayMidDescription(text.getEndDescription());
+			
 			System.exit(0);
 			}
 		
