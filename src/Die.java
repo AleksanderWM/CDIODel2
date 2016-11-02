@@ -1,7 +1,7 @@
 public class Die 
 {
-	private final static int MAX = 6; 	// Maximum face value
-	private static int faceValue;
+	private final int MAX = 6; 	// Maximum face value
+	private int faceValue;
 
 	// Constructor
 	public Die()	
