@@ -61,12 +61,9 @@ public class Shaker {
 	public String toString()
 	{
 		return Integer.toString(shakeValue);
-		
-		
 	}
 	public void resetShake()
 	{
 		shakeValue = 0;
-				
 	}
 }

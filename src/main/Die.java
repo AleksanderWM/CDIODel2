@@ -10,7 +10,6 @@ public class Die
 		faceValue = 0;
 	}
 	
-	
 	//Method for rolling die to achieve random face value
 	public void setRoll()
 	{

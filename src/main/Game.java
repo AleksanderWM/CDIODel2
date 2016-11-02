@@ -1,7 +1,6 @@
 package main;
 public class Game {
 	
-	
 	Text text = new Text();
 	private Player player1 = new Player("Player one");
 	private Player player2 = new Player("Player two");
@@ -76,8 +75,5 @@ public class Game {
 			
 			System.exit(0);
 			}
-		
 	}
-
-
 }

@@ -7,7 +7,6 @@ import desktop_fields.Start;
 
 public class MUI 
 
-
 {
 	Color Basecolor = new Color(51, 204, 0);
 	Color Water = new Color(139, 183, 240);
@@ -211,5 +210,4 @@ GUI.create(fields);
 		removeCar(player, shaker);
 		setCarOnStart(player);
 	}
-	
 }
