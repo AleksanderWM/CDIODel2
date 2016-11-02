@@ -40,18 +40,18 @@ public class Shaker {
 	 * Returns the value of Die1 from the roll.
 	 * @return
 	 */
-	public int getDie1()
+	public Die getDie1()
 	{
-		return die1.getRoll();
+		return die1;
 	}
 	
 	/**
 	 * Returns the value of Die2 from the roll.
 	 * @return
 	 */
-	public int getDie2()
+	public Die getDie2()
 	{
-		return die2.getRoll();
+		return die2;
 	}
 	
 	/**

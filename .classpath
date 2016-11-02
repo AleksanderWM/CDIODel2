@@ -3,5 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="GUI.jar" sourcepath="/Users/EmilJorgensen/Documents/Google Drev/DTU/1. Semester/Programmerings-triaden/5xITØ + 1xSWT/CDIO/Del 2/GUI/GUI.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

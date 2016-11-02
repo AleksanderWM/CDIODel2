@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * @author EmilJorgensen
- *
- */
-package gui;

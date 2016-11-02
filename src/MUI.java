@@ -151,7 +151,7 @@ GUI.create(fields);
 	 */
 	public void setDice(Shaker shaker)
 	{
-		GUI.setDice(shaker.getDie1(), shaker.getDie2());
+		GUI.setDice(shaker.getDie1().getRoll(), shaker.getDie2().getRoll());
 	}
 	
 	/**
