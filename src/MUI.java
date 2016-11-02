@@ -2,7 +2,6 @@ import desktop_resources.GUI;
 import java.awt.Color;
 import desktop_fields.Refuge;
 import desktop_fields.Field;
-import desktop_fields.Street;
 import desktop_fields.Start;
 
 public class MUI 
@@ -15,6 +14,7 @@ public class MUI
 	 * @param createBoard Creates the GUI with a set of 13 fields difined by the fieldArray from Text
 	 * @param text The Text class where the fieldArray is located
 	 */
+	
 	public void createBoard(Text text)
 	{
 	Field[] fields = new Field[13];
@@ -23,6 +23,8 @@ public class MUI
 			setBgColor(Color.RED).
 			setSubText(null).
 			build();
+	
+//Bridge
 	fields[1] = new Refuge.Builder().
 			setTitle(" ").
 			setSubText(null).
@@ -30,6 +32,7 @@ public class MUI
 			setDescription(" ").
 			setBgColor(Water).
 			build();
+//Tower
 	fields[2] = new Refuge.Builder().
 			setTitle(text.fieldArray[2].getFieldText()).
 			setSubText(text.fieldArray[2].getFieldText()).
@@ -37,6 +40,7 @@ public class MUI
 			setPicture(text.fieldArray[2].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
+//Crater
 	fields[3] = new Refuge.Builder().
 			setTitle(text.fieldArray[3].getFieldText()).
 			setSubText(text.fieldArray[3].getFieldText()).
@@ -44,6 +48,8 @@ public class MUI
 			setPicture(text.fieldArray[3].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
+	
+//Palace Gatew
 	fields[4] = new Refuge.Builder().
 			setTitle(text.fieldArray[4].getFieldText()).
 			setSubText(text.fieldArray[4].getFieldText()).
@@ -51,6 +57,8 @@ public class MUI
 			setPicture(text.fieldArray[4].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
+	
+//Cold Desert
 	fields[5] = new Refuge.Builder().
 			setTitle(text.fieldArray[5].getFieldText()).
 			setSubText(text.fieldArray[5].getFieldText()).
@@ -58,6 +66,8 @@ public class MUI
 			setPicture(text.fieldArray[5].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
+	
+//Walled City
 	fields[6] = new Refuge.Builder().
 			setTitle(text.fieldArray[6].getFieldText()).
 			setSubText(text.fieldArray[6].getFieldText()).
@@ -65,6 +75,7 @@ public class MUI
 			setPicture(text.fieldArray[6].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
+//Monastery
 	fields[7] = new Refuge.Builder().
 			setTitle(text.fieldArray[7].getFieldText()).
 			setSubText(text.fieldArray[7].getFieldText()).
@@ -72,6 +83,8 @@ public class MUI
 			setPicture(text.fieldArray[7].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
+	
+//Black Cave
 	fields[8] = new Refuge.Builder().
 			setTitle(text.fieldArray[8].getFieldText()).
 			setSubText(text.fieldArray[8].getFieldText()).
@@ -79,6 +92,8 @@ public class MUI
 			setPicture(text.fieldArray[8].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
+	
+//Huts in the mountain
 	fields[9] = new Refuge.Builder().
 			setTitle(text.fieldArray[9].getFieldText()).
 			setSubText(text.fieldArray[9].getFieldText()).
@@ -86,6 +101,8 @@ public class MUI
 			setPicture(text.fieldArray[9].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
+	
+//The WareWall
 	fields[10] = new Refuge.Builder().
 			setTitle(text.fieldArray[10].getFieldText()).
 			setSubText(text.fieldArray[10].getFieldText()).
@@ -93,13 +110,16 @@ public class MUI
 			setPicture(text.fieldArray[10].getPicture()).
 			setBgColor(Color.WHITE).
 			build();	
+	
+//The Pit
 	fields[11] = new Refuge.Builder().
 			setTitle(text.fieldArray[11].getFieldText()).
 			setSubText(text.fieldArray[11].getFieldText()).
 			setDescription(text.fieldArray[11].getValueString()).
 			setPicture(text.fieldArray[11].getPicture()).
 			setBgColor(Color.WHITE).
-			build();	
+			build();
+//Goldmine
 	fields[12] = new Refuge.Builder().
 			setTitle(text.fieldArray[12].getFieldText()).
 			setSubText(text.fieldArray[12].getFieldText()).
@@ -166,13 +186,29 @@ GUI.create(fields);
 		
 		GUI.displayChanceCard(text);
 	}
-//	public void displayMidDescription(String text)
-//	{
-//		
-//		GUI.displayChanceCard(text);
-//	}
+
+	
 	public void button(String msg,String button)
 	{
 		GUI.getUserButtonPressed(msg, button);
 	}
+	
+	public void initialTurn(Player player, Shaker shaker)
+	{
+		displayMidDescription(player.getPlayerName() + "'s Turn!");
+		button(player.getPlayerName(),"Take Turn");
+		removeCar(player, shaker);
+	}
+	
+	public void mainTurn(Player player, Shaker shaker,Text text)
+	{
+		setDice(shaker);
+		setBalance(player);
+		setCar(player, shaker);
+		displayMidDescription(text.getTurnDescription(player, shaker));
+		button(player.getPlayerName(),"End Turn");
+		removeCar(player, shaker);
+		setCarOnStart(player);
+	}
+	
 }

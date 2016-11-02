@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 public class Game {
 	
@@ -7,7 +6,6 @@ public class Game {
 	private Player player1 = new Player("Player one");
 	private Player player2 = new Player("Player two");
 	Shaker shaker = new Shaker();
-	private Scanner scan = new Scanner(System.in);
 	public int count = 1;
 	Rule rules = new Rule();
 	MUI mui = new MUI();
@@ -30,23 +28,14 @@ public class Game {
 	
 	/**
 	 * @param playerTurn perform a single turn by rolling the dice, setting the balance and returning all relevant info in correspondence to the current player
-	 * @param p the current player performing a turn
+	 * @param player the current player performing a turn
 	 */
-	public void playerTurn(Player p)
+	public void playerTurn(Player player)
 	{
-		mui.displayMidDescription(p.getPlayerName() + "'s Turn!");
-		mui.button(p.getPlayerName(),"Take Turn");
-		mui.removeCar(p, shaker);
+		mui.initialTurn(player, shaker);
 		shaker.setShake();
-		p.getAccount().setBalance(text.getFieldValue(shaker.getShake()));
-		mui.setDice(shaker);
-		mui.setBalance(p);
-		mui.setCar(p, shaker);
-		mui.displayMidDescription(text.getTurnDescription(p, shaker));
-		mui.button(p.getPlayerName(),"End Turn");
-		mui.removeCar(p, shaker);
-		mui.setCarOnStart(p);
-			
+		player.getAccount().setBalance(text.getFieldValue(shaker.getShake()));
+		mui.mainTurn(player, shaker, text);
 	}
 	
 	/**
