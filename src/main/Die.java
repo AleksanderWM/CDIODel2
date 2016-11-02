@@ -1,3 +1,4 @@
+package main;
 public class Die 
 {
 	private final int MAX = 6; 	// Maximum face value

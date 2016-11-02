@@ -1,3 +1,4 @@
+package main;
 /**
  * @author Aleksander and Morten N
  * Edited by Emil and Nick

@@ -1,4 +1,4 @@
-
+package main;
 public class CustomField {
 	
 	private String fieldDescription;

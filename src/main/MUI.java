@@ -1,3 +1,4 @@
+package main;
 import desktop_resources.GUI;
 import java.awt.Color;
 import desktop_fields.Refuge;
