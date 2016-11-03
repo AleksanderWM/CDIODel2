@@ -13,19 +13,19 @@ public class Text {
 	 */
 	CustomField[] fieldArray =
 		{
-			new CustomField(" ", 0, " "),
-			new CustomField(" ", 0, "icons/BridgeIcon.png"),
-			new CustomField("Tower", 250,"icons/TowerIcon.jpg"),
-			new CustomField("Crater", -100,"icons/CraterIcon.jpg"),
-			new CustomField("Palace Gates", +100,"icons/PalaceGatesIcon.jpg"),
-			new CustomField("Cold Desert", -20,"icons/ColdDesertIcon.jpg"),
-			new CustomField("Walled City", +180,"icons/WalledCityIcon.jpg"),
-			new CustomField("Monastery", 0,"icons/MonasteryIcon.jpg"),
-			new CustomField("Black cave", -70,"icons/BlackCaveIcon.jpg"),
-			new CustomField("Huts in the mountain", +60,"icons/MountainHutIcon.jpg"),
-			new CustomField("The Werewall", -80,"icons/WareWallIcon.jpg"),
-			new CustomField("The Pit", -50,"icons/PitIcon.jpg"),
-			new CustomField("Goldmine", +650,"icons/GoldmineIcon.jpg"),
+			new CustomField(" "," ", 0, " "),
+			new CustomField(" "," ", 0, "icons/BridgeIcon.png"),
+			new CustomField("Tower","You encounter a tower, unlike in fairytales this tower does not hold a princess. It does however hold 250 Gold coins. Take these with you on your quest.", 250,"icons/TowerIcon.jpg"),
+			new CustomField("Crater","You encounter a crater. You fall into it, and while stumbling down lose 100 Gold coins.", -100,"icons/CraterIcon.jpg"),
+			new CustomField("Palace Gates","You encounter the Palace Gates. You trick someone into paying you a 100 Gold coins fee for passing through the gates.", +100,"icons/PalaceGatesIcon.jpg"),
+			new CustomField("Cold Desert","You have wandered into the Cold Deserts, to keep yourself warm, you light your goldcoins on fire. You burn through 20 Gold coins, but are now warm.", -20,"icons/ColdDesertIcon.jpg"),
+			new CustomField("Walled City","You encounter a Walled City. The city desperately needs foreigners to populate their genepool, so they pay you 180 Goldc oins to stay overnight.", +180,"icons/WalledCityIcon.jpg"),
+			new CustomField("Monastery","You visit a Monastery in your travels. They let you spend the night, without any fees. You do however not get any Gold coins this round.", 0,"icons/MonasteryIcon.jpg"),
+			new CustomField("Black cave","You have come across the Black cave. You discover it is a brothel, and happily spend 70 Gold coins to stay the night.", -70,"icons/BlackCaveIcon.jpg"),
+			new CustomField("Huts in the mountain","You discover some huts in a mountain. You search through them, and find 70 Gold coins. Nobody lives here, so you put them in your pocket.", +60,"icons/MountainHutIcon.jpg"),
+			new CustomField("The Werewall","You encounter the Werewall. The warewolfs scare you, and you drop 80 Gold coins. You discover that they were actually Girl Scout’s trying out new methods instead of selling cookies. You ran so fast that you get an extra turn", -80,"icons/WareWallIcon.jpg"),
+			new CustomField("The Pit","You encounter a pit. Just like your spending habits in the real world, you throw money in to this pit as well. You lose 50 Gold coins.", -50,"icons/PitIcon.jpg"),
+			new CustomField("Goldmine","You find an abandoned Goldmine. You go inside and find gold worth 650 Gold coins. This must be your lucky day!", +650,"icons/GoldmineIcon.jpg"),
 		};
 	
 	/**
@@ -34,7 +34,7 @@ public class Text {
 	 */
 	private String getFieldDescription(int point)
 	{ 
-		return fieldArray[point].getFieldText();
+		return fieldArray[point].getFieldDescription();
 	}
 	
 	/**
@@ -70,14 +70,7 @@ public class Text {
 	
 	String getTurnDescription(Player player, Shaker shake)
 	{
-		if(shake.getShake()!=10)
-			{
-			return player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYour balance is changed by " + getFieldValue(shake.getShake()) + " to:\n" + player.getAccount().toString();
-			}
-		else
-			{
-			return player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYou get an extra turn but your balance is changed by " + getFieldValue(shake.getShake()) + " to:\n" + player.getAccount().toString();
-			}
+		return player.getPlayerName() + " rolled " + shake + ".\n"+ getFieldDescription(shake.getShake());
 	}
 	/**
 	 * Returns the Welcome tekst.

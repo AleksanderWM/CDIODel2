@@ -9,6 +9,7 @@ public class CustomField {
 	private String fieldDescription;
 	private int fieldValue;
 	private String fieldPicture;
+	private String fieldTitle;
 	
 	/**
 	 * @param CustomField Constructor. Creates a CustomField object.
@@ -16,28 +17,28 @@ public class CustomField {
 	 * @param value Describes the value of the field.
 	 * @param picture The picture associated to that field.
 	 */
-	CustomField(String description, int value,String picture)
+	CustomField(String title, String description, int value,String picture)
 	{
+		fieldTitle = title;
 		fieldDescription = description;
 		fieldValue = value;
 		fieldPicture = picture;
 	}
 	/**
-	 * Sets the fieldDescription
-	 * @param text
+	 * Gets the description of a Field
 	 */
-	public void setFieldText(String text)
+	public String getFieldDescription()
 	{
-		fieldDescription = text;
+		return fieldDescription;
 	}
 	
 	/**
 	 * Returns the fieldDescription
 	 * @return fieldDescription
 	 */
-	public String getFieldText()
+	public String getFieldTitle()
 	{
-		return fieldDescription;
+		return fieldTitle;
 		
 	}
 	/**
