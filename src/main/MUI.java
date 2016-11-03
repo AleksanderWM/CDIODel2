@@ -41,9 +41,9 @@ public class MUI
  * Tower
  */
 	fields[2] = new Refuge.Builder().
-			setTitle(text.fieldArray[2].getFieldText()).
-			setSubText(text.fieldArray[2].getFieldText()).
-			setDescription(text.fieldArray[2].getValueString()).
+			setTitle(text.fieldArray[2].getFieldTitle()).
+			setSubText(text.fieldArray[2].getValueString()).
+			setDescription(text.fieldArray[2].getFieldDescription()).
 			setPicture(text.fieldArray[2].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
@@ -51,9 +51,9 @@ public class MUI
  * Crater
  */
 	fields[3] = new Refuge.Builder().
-			setTitle(text.fieldArray[3].getFieldText()).
-			setSubText(text.fieldArray[3].getFieldText()).
-			setDescription(text.fieldArray[3].getValueString()).
+			setTitle(text.fieldArray[3].getFieldTitle()).
+			setSubText(text.fieldArray[3].getValueString()).
+			setDescription(text.fieldArray[3].getFieldDescription()).
 			setPicture(text.fieldArray[3].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
@@ -62,9 +62,9 @@ public class MUI
  * Palace Gates
  */
 	fields[4] = new Refuge.Builder().
-			setTitle(text.fieldArray[4].getFieldText()).
-			setSubText(text.fieldArray[4].getFieldText()).
-			setDescription(text.fieldArray[4].getValueString()).
+			setTitle(text.fieldArray[4].getFieldTitle()).
+			setSubText(text.fieldArray[4].getValueString()).
+			setDescription(text.fieldArray[4].getFieldDescription()).
 			setPicture(text.fieldArray[4].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
@@ -73,9 +73,9 @@ public class MUI
  * Cold Desert
  */
 	fields[5] = new Refuge.Builder().
-			setTitle(text.fieldArray[5].getFieldText()).
-			setSubText(text.fieldArray[5].getFieldText()).
-			setDescription(text.fieldArray[5].getValueString()).
+			setTitle(text.fieldArray[5].getFieldTitle()).
+			setSubText(text.fieldArray[5].getValueString()).
+			setDescription(text.fieldArray[5].getFieldDescription()).
 			setPicture(text.fieldArray[5].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
@@ -84,9 +84,9 @@ public class MUI
  * Walled City
  */
 	fields[6] = new Refuge.Builder().
-			setTitle(text.fieldArray[6].getFieldText()).
-			setSubText(text.fieldArray[6].getFieldText()).
-			setDescription(text.fieldArray[6].getValueString()).
+			setTitle(text.fieldArray[6].getFieldTitle()).
+			setSubText(text.fieldArray[6].getValueString()).
+			setDescription(text.fieldArray[6].getFieldDescription()).
 			setPicture(text.fieldArray[6].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
@@ -94,9 +94,9 @@ public class MUI
  * Monastery
  */
 	fields[7] = new Refuge.Builder().
-			setTitle(text.fieldArray[7].getFieldText()).
-			setSubText(text.fieldArray[7].getFieldText()).
-			setDescription(text.fieldArray[7].getValueString()).
+			setTitle(text.fieldArray[7].getFieldTitle()).
+			setSubText(text.fieldArray[7].getValueString()).
+			setDescription(text.fieldArray[7].getFieldDescription()).
 			setPicture(text.fieldArray[7].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
@@ -105,9 +105,9 @@ public class MUI
  * Black Cave
  */
 	fields[8] = new Refuge.Builder().
-			setTitle(text.fieldArray[8].getFieldText()).
-			setSubText(text.fieldArray[8].getFieldText()).
-			setDescription(text.fieldArray[8].getValueString()).
+			setTitle(text.fieldArray[8].getFieldTitle()).
+			setSubText(text.fieldArray[8].getValueString()).
+			setDescription(text.fieldArray[8].getFieldDescription()).
 			setPicture(text.fieldArray[8].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
@@ -116,9 +116,9 @@ public class MUI
  * Huts in the mountain
  */
 	fields[9] = new Refuge.Builder().
-			setTitle(text.fieldArray[9].getFieldText()).
-			setSubText(text.fieldArray[9].getFieldText()).
-			setDescription(text.fieldArray[9].getValueString()).
+			setTitle(text.fieldArray[9].getFieldTitle()).
+			setSubText(text.fieldArray[9].getValueString()).
+			setDescription(text.fieldArray[9].getFieldDescription()).
 			setPicture(text.fieldArray[9].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
@@ -127,9 +127,9 @@ public class MUI
  * The WareWall
  */
 	fields[10] = new Refuge.Builder().
-			setTitle(text.fieldArray[10].getFieldText()).
-			setSubText(text.fieldArray[10].getFieldText()).
-			setDescription(text.fieldArray[10].getValueString()).
+			setTitle(text.fieldArray[10].getFieldTitle()).
+			setSubText(text.fieldArray[10].getValueString()).
+			setDescription(text.fieldArray[10].getFieldDescription()).
 			setPicture(text.fieldArray[10].getPicture()).
 			setBgColor(Color.WHITE).
 			build();	
@@ -138,9 +138,9 @@ public class MUI
  * The Pit
  */
 	fields[11] = new Refuge.Builder().
-			setTitle(text.fieldArray[11].getFieldText()).
-			setSubText(text.fieldArray[11].getFieldText()).
-			setDescription(text.fieldArray[11].getValueString()).
+			setTitle(text.fieldArray[11].getFieldTitle()).
+			setSubText(text.fieldArray[11].getValueString()).
+			setDescription(text.fieldArray[11].getFieldDescription()).
 			setPicture(text.fieldArray[11].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
@@ -148,9 +148,9 @@ public class MUI
  * Goldmine
  */
 	fields[12] = new Refuge.Builder().
-			setTitle(text.fieldArray[12].getFieldText()).
-			setSubText(text.fieldArray[12].getFieldText()).
-			setDescription(text.fieldArray[12].getValueString()).
+			setTitle(text.fieldArray[12].getFieldTitle()).
+			setSubText(text.fieldArray[12].getValueString()).
+			setDescription(text.fieldArray[12].getFieldDescription()).
 			setPicture(text.fieldArray[12].getPicture()).
 			setBgColor(Color.WHITE).
 			build();	
