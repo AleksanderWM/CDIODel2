@@ -24,7 +24,6 @@ public class Rule {
 	{
 	if(player.getAccount().getBalance() >= 3000)
 	{
-	System.out.println(player.getAccount());
 	return true;
 	}
 	return false;

@@ -71,7 +71,6 @@ public class Game {
 		if(rules.winner(player) == true)
 			{
 			mui.displayMidDescription(text.getEndDescription());
-			
 			System.exit(0);
 			}
 	}

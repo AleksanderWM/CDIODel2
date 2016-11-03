@@ -186,11 +186,9 @@ GUI.create(fields);
 	 */
 	void displayMidDescription(String text)
 	{
-		
 		GUI.displayChanceCard(text);
 	}
 
-	
 	void button(String msg,String button)
 	{
 		GUI.getUserButtonPressed(msg, button);
