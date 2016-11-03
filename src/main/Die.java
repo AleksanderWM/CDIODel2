@@ -1,4 +1,9 @@
 package main;
+/**
+ * @Author Emil
+ * edited by Aleksander
+ * This class holds the responsibility to manage the individual dies..
+ */
 public class Die 
 {
 	private final int MAX = 6; 	// Maximum face value

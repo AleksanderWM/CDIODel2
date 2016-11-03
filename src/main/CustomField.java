@@ -1,4 +1,9 @@
 package main;
+/**
+ * @Author Aleksander.
+ * Edited by Emil
+ * This class holds the responsibility of creating the CustomField, which holds information about the fields on the board.
+ */
 public class CustomField {
 	
 	private String fieldDescription;

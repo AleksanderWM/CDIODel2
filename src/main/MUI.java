@@ -1,4 +1,8 @@
 package main;
+/**
+ * @author Emil
+ * This class holds the responsibility to manage the players individual score.
+ */
 import desktop_resources.GUI;
 import java.awt.Color;
 import desktop_fields.Refuge;

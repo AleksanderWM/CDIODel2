@@ -1,11 +1,15 @@
 package main;
+/**
+ * @Author Aleksander.
+ * This class holds the responsibility to manage the players individual score.
+ */
 public class Account {
 
 	private int Balance;
 	private int MIN=0;
 
 	/**
-	 * @param Account Constructor. Creates an Account object with the inital balance of 1000
+	 * @param Account Constructor. Creates an Account object with the initial balance of 1000
 	 */
 public Account()	
 {

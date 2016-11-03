@@ -1,4 +1,9 @@
 package main;
+/**
+ * @author Aleksander.
+ * edited by Emil
+ * This class holds the responsibility to manage the rules of the game.
+ */
 public class Rule {
 	
 	//Rule for Werewall (Used for -80 points and eksta turn)
