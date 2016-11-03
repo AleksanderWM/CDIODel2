@@ -19,17 +19,17 @@ public class MUI
 	{
 	Field[] fields = new Field[13];
 	fields[0] = new Start.Builder().
-			setTitle("START").
+			setTitle(text.getStartField()).
 			setBgColor(Color.RED).
 			setSubText(null).
 			build();
 	
 //Bridge
 	fields[1] = new Refuge.Builder().
-			setTitle(" ").
+			setTitle(text.getBlankSpace()).
 			setSubText(null).
 			setPicture(text.fieldArray[1].getPicture()).
-			setDescription(" ").
+			setDescription(text.getBlankSpace()).
 			setBgColor(Water).
 			build();
 //Tower
@@ -193,10 +193,10 @@ GUI.create(fields);
 		GUI.getUserButtonPressed(msg, button);
 	}
 	
-	public void initialTurn(Player player, Shaker shaker)
+	public void initialTurn(Player player, Shaker shaker, Text text)
 	{
-		displayMidDescription(player.getPlayerName() + "'s Turn!");
-		button(player.getPlayerName(),"Take Turn");
+		displayMidDescription(player.getPlayerName() + text.getPlayerTurn());
+		button(player.getPlayerName(),text.getTakeTurn());
 		removeCar(player, shaker);
 	}
 	
@@ -206,7 +206,7 @@ GUI.create(fields);
 		setBalance(player);
 		setCar(player, shaker);
 		displayMidDescription(text.getTurnDescription(player, shaker));
-		button(player.getPlayerName(),"End Turn");
+		button(player.getPlayerName(),text.getEndTurn());
 		removeCar(player, shaker);
 		setCarOnStart(player);
 	}

@@ -2,8 +2,8 @@ package main;
 public class Game {
 	
 	Text text = new Text();
-	private Player player1 = new Player("Player one");
-	private Player player2 = new Player("Player two");
+	private Player player1 = new Player("Sir Huckleberry");
+	private Player player2 = new Player("Bob");
 	Shaker shaker = new Shaker();
 	public int count = 1;
 	Rule rules = new Rule();
@@ -20,7 +20,7 @@ public class Game {
 		mui.setCar(player1, shaker);
 		mui.setCar(player2, shaker);
 		mui.displayMidDescription(text.getStartDescription());
-		mui.button("Welcome", "Start Game");
+		mui.button(text.getWelcome(), text.getStartGame());
 		playLoop();
 	}
 
@@ -30,7 +30,7 @@ public class Game {
 	 */
 	public void playerTurn(Player player)
 	{
-		mui.initialTurn(player, shaker);
+		mui.initialTurn(player, shaker, text);
 		shaker.setShake();
 		player.getAccount().setBalance(text.getFieldValue(shaker.getShake()));
 		mui.mainTurn(player, shaker, text);

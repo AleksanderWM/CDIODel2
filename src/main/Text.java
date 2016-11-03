@@ -98,6 +98,40 @@ public class Text {
 			return player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYou get an extra turn but your balance is changed by " + getFieldValue(shake.getShake()) + " to:\n" + player.getAccount().toString();
 			}
 	}
-	
 
+	public String getWelcome()
+	{
+		return "Welcome!";
+	}
+
+	public String getStartGame()
+	{
+		return "Start Game";
+	}
+	
+	public String getStartField()
+	{
+		return "START";
+	}
+	
+	public String getBlankSpace()
+	{
+		return " ";
+	}
+	
+	public String getPlayerTurn()
+	{
+		return "'s turn!";
+	}
+	
+	public String getTakeTurn()
+	{
+		return "Take turn!";
+	}
+	
+	public String getEndTurn()
+	{
+		return "End Turn";
+	}
 }
+
