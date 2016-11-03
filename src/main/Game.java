@@ -1,18 +1,18 @@
 package main;
 public class Game {
 	
-	Text text = new Text();
+	private Text text = new Text();
 	private Player player1 = new Player("Sir Huckleberry");
 	private Player player2 = new Player("Bob");
-	Shaker shaker = new Shaker();
-	public int count = 1;
-	Rule rules = new Rule();
-	MUI mui = new MUI();
+	private Shaker shaker = new Shaker();
+	private int count = 1;
+	private Rule rules = new Rule();
+	private MUI mui = new MUI();
 	
 	/**
 	 * @param play Starts the method playLoop, thereby starting the game
 	 */
-	public void play()
+	void play()
 	{
 		mui.createBoard(text);
 		mui.addPlayer(player1);
@@ -28,7 +28,7 @@ public class Game {
 	 * @param playerTurn perform a single turn by rolling the dice, setting the balance and returning all relevant info in correspondence to the current player
 	 * @param player the current player performing a turn
 	 */
-	public void playerTurn(Player player)
+	private void playerTurn(Player player)
 	{
 		mui.initialTurn(player, shaker, text);
 		shaker.setShake();
@@ -39,7 +39,7 @@ public class Game {
 	/**
 	 * @param playLoop The Game instance itself. Takes alternating turns for the two players as long a no player fulfills the winning condition
 	 */
-	public void playLoop()
+	private void playLoop()
 	{
 		while(count < 4)
 		{
@@ -67,7 +67,7 @@ public class Game {
 	 * @param endGame if the winning condition is fulfilled in the playLoop method, this method is called, printing an endDescription and termination the game.
 	 * @param player the player object
 	 */
-	public void endGame(Player player)
+	private void endGame(Player player)
 	{
 		if(rules.winner(player) == true)
 			{

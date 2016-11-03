@@ -40,7 +40,7 @@ public int getBalance()
 /*
  * Makes sure the player's balance can't get below 0
  */
-public int minBalance()
+private int minBalance()
 {
 	if (Balance <= MIN){
 		Balance=0;

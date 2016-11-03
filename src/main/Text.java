@@ -11,7 +11,7 @@ public class Text {
 	/**
 	 *  Creates an array of CustomFields with their separate descriptions and value.
 	 */
-	public CustomField[] fieldArray =
+	CustomField[] fieldArray =
 		{
 			new CustomField(" ", 0, " "),
 			new CustomField(" ", 0, "icons/BridgeIcon.png"),
@@ -32,7 +32,7 @@ public class Text {
 	 * @param getFieldDescription Returns the fieldDescription of a single field in response to the array reference
 	 * @param point the reference to the fields reference in the constructed array
 	 */
-	public String getFieldDescription(int point)
+	private String getFieldDescription(int point)
 	{ 
 		
 		return fieldArray[point].getFieldText();
@@ -43,14 +43,9 @@ public class Text {
 	 * @param getFieldValue Returns the fieldVaule of a single field in response to the array reference
 	 * @param point the reference to the fields reference in the constructed array
 	 */
-	public int getFieldValue(int point)
+	int getFieldValue(int point)
 	{
 		return fieldArray[point].getValueInt();
-	}
-	
-	public String getPicture(int point)
-	{
-		return fieldArray[point].getPicture();
 	}
 
 	/**
@@ -77,19 +72,8 @@ public class Text {
 	 * @param player the Player object of whom the turn description shall be printed
 	 * @param shake the Shake object signifying the dice roll of the turn
 	 */
-	public void turnDescription(Player player, Shaker shake)
-	{
-		if(shake.getShake()!=10)
-			{
-			System.out.println(player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYour balance is changed by " + getFieldValue(shake.getShake()) + " to:" + player.getAccount().toString());
-			}
-		else
-			{
-			System.out.println(player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYou get an extra turn but your balance is changed by " + getFieldValue(shake.getShake()) + " to:" + player.getAccount().toString());
-			}
-	}
 	
-	public String getTurnDescription(Player player, Shaker shake)
+	String getTurnDescription(Player player, Shaker shake)
 	{
 		if(shake.getShake()!=10)
 			{

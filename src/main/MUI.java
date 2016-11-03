@@ -12,14 +12,13 @@ import desktop_fields.Start;
 public class MUI 
 
 {
-	Color Basecolor = new Color(51, 204, 0);
-	Color Water = new Color(139, 183, 240);
+	private Color Water = new Color(139, 183, 240);
 	/**
 	 * @param createBoard Creates the GUI with a set of 13 fields difined by the fieldArray from Text
 	 * @param text The Text class where the fieldArray is located
 	 */
 	
-	public void createBoard(Text text)
+	void createBoard(Text text)
 	{
 	Field[] fields = new Field[13];
 	fields[0] = new Start.Builder().
@@ -137,7 +136,7 @@ GUI.create(fields);
 	/**
 	 * @param addPlayer Adds a player to the board
 	 */
-	public void addPlayer(Player player)
+	void addPlayer(Player player)
 	{
 		GUI.addPlayer(player.getPlayerName(), player.getAccount().getBalance());
 	}
@@ -161,7 +160,7 @@ GUI.create(fields);
 	/**
 	 * @param setCar Sets a car on a given field position (-1) on the board
 	 */
-	public void setCar(Player player,Shaker shaker)
+	void setCar(Player player,Shaker shaker)
 	{
 		GUI.setCar(shaker.getShake()+1, player.getPlayerName());
 	}
@@ -177,7 +176,7 @@ GUI.create(fields);
 	/**
 	 * @param removeCar Removes a car on a given field position (-1) on the board
 	 */
-	public void removeCar(Player player,Shaker shaker)
+	private void removeCar(Player player,Shaker shaker)
 	{
 		GUI.removeAllCars(player.getPlayerName());
 	}
@@ -185,26 +184,26 @@ GUI.create(fields);
 	/**
 	 * @param displayTurnDescription Shows a description of the actions performed on a turn in the middle of the board
 	 */
-	public void displayMidDescription(String text)
+	void displayMidDescription(String text)
 	{
 		
 		GUI.displayChanceCard(text);
 	}
 
 	
-	public void button(String msg,String button)
+	void button(String msg,String button)
 	{
 		GUI.getUserButtonPressed(msg, button);
 	}
 	
-	public void initialTurn(Player player, Shaker shaker, Text text)
+	void initialTurn(Player player, Shaker shaker, Text text)
 	{
 		displayMidDescription(player.getPlayerName() + text.getPlayerTurn());
 		button(player.getPlayerName(),text.getTakeTurn());
 		removeCar(player, shaker);
 	}
 	
-	public void mainTurn(Player player, Shaker shaker,Text text)
+	void mainTurn(Player player, Shaker shaker,Text text)
 	{
 		setDice(shaker);
 		setBalance(player);
