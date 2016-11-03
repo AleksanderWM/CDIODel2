@@ -1,14 +1,16 @@
 package main;
 /**
+ * @author Emil and Aleksander
  * The Text class holds and controls all text that may be printed to the user.
  * The primary reasoning for reserving all text to a specific class is to ease any process of translation.
- * @author Emil and Aleksander
+ * In future projects we will be creating a text file, for the game to load, and easing the translation process.
  */
 public class Text {
 
 
-	// Creates an array of CustomFields with their separate descriptions and value.
-	
+	/**
+	 *  Creates an array of CustomFields with their separate descriptions and value.
+	 */
 	public CustomField[] fieldArray =
 		{
 			new CustomField(" ", 0, " "),

@@ -2,6 +2,7 @@ package main;
 /**
  * @author Aleksander and Morten N
  * Edited by Emil and Nick
+ * This class holds the responsibility to shake the dies.
  */
 public class Shaker {
 	
