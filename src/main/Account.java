@@ -10,6 +10,7 @@ public class Account {
 
 	/**
 	 * @param Account Constructor. Creates an Account object with the initial balance of 1000
+	 * @param Balance the players amount of Goldcoins.
 	 */
 public Account()	
 {
@@ -17,9 +18,9 @@ public Account()
 }
 	
 /**
- * Calculates the player's balance. This is done by having the (int currentShakerValue) added to the score. 
- * @param currentShakerValue Adds the current shaker points to the total score.
+ * Calculates the player's balance. This is done by having the value from the CustomField array, specified by the shakervalue, added to the score. 
  * @param point the integer value to be added to the balance.
+ * @param minBalance is there to make sure the balance does not go under 0.
  * @return Balance
  */
 public int setBalance(int point)
@@ -37,7 +38,7 @@ public int getBalance()
 {
 	return Balance;
 }
-/*
+/**
  * Makes sure the player's balance can't get below 0
  */
 private int minBalance()

@@ -1,7 +1,7 @@
 package main;
 /**
- * @author Emil
- * This class holds the responsibility to manage the players individual score.
+ * @author Emil 
+ * This class holds the responsibility to call the methods from the GUI.
  */
 import desktop_resources.GUI;
 import java.awt.Color;
@@ -27,7 +27,9 @@ public class MUI
 			setSubText(null).
 			build();
 	
-//Bridge
+/**
+ * Bridge
+ */
 	fields[1] = new Refuge.Builder().
 			setTitle(text.getBlankSpace()).
 			setSubText(null).
@@ -35,7 +37,9 @@ public class MUI
 			setDescription(text.getBlankSpace()).
 			setBgColor(Water).
 			build();
-//Tower
+/**
+ * Tower
+ */
 	fields[2] = new Refuge.Builder().
 			setTitle(text.fieldArray[2].getFieldText()).
 			setSubText(text.fieldArray[2].getFieldText()).
@@ -43,7 +47,9 @@ public class MUI
 			setPicture(text.fieldArray[2].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
-//Crater
+/**
+ * Crater
+ */
 	fields[3] = new Refuge.Builder().
 			setTitle(text.fieldArray[3].getFieldText()).
 			setSubText(text.fieldArray[3].getFieldText()).
@@ -52,7 +58,9 @@ public class MUI
 			setBgColor(Color.WHITE).
 			build();
 	
-//Palace Gatew
+/**
+ * Palace Gates
+ */
 	fields[4] = new Refuge.Builder().
 			setTitle(text.fieldArray[4].getFieldText()).
 			setSubText(text.fieldArray[4].getFieldText()).
@@ -61,7 +69,9 @@ public class MUI
 			setBgColor(Color.WHITE).
 			build();
 	
-//Cold Desert
+/**
+ * Cold Desert
+ */
 	fields[5] = new Refuge.Builder().
 			setTitle(text.fieldArray[5].getFieldText()).
 			setSubText(text.fieldArray[5].getFieldText()).
@@ -70,7 +80,9 @@ public class MUI
 			setBgColor(Color.WHITE).
 			build();
 	
-//Walled City
+/**
+ * Walled City
+ */
 	fields[6] = new Refuge.Builder().
 			setTitle(text.fieldArray[6].getFieldText()).
 			setSubText(text.fieldArray[6].getFieldText()).
@@ -78,7 +90,9 @@ public class MUI
 			setPicture(text.fieldArray[6].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
-//Monastery
+/**
+ * Monastery
+ */
 	fields[7] = new Refuge.Builder().
 			setTitle(text.fieldArray[7].getFieldText()).
 			setSubText(text.fieldArray[7].getFieldText()).
@@ -87,7 +101,9 @@ public class MUI
 			setBgColor(Color.WHITE).
 			build();
 	
-//Black Cave
+/**
+ * Black Cave
+ */
 	fields[8] = new Refuge.Builder().
 			setTitle(text.fieldArray[8].getFieldText()).
 			setSubText(text.fieldArray[8].getFieldText()).
@@ -96,7 +112,9 @@ public class MUI
 			setBgColor(Color.WHITE).
 			build();
 	
-//Huts in the mountain
+/**
+ * Huts in the mountain
+ */
 	fields[9] = new Refuge.Builder().
 			setTitle(text.fieldArray[9].getFieldText()).
 			setSubText(text.fieldArray[9].getFieldText()).
@@ -105,7 +123,9 @@ public class MUI
 			setBgColor(Color.WHITE).
 			build();
 	
-//The WareWall
+/**
+ * The WareWall
+ */
 	fields[10] = new Refuge.Builder().
 			setTitle(text.fieldArray[10].getFieldText()).
 			setSubText(text.fieldArray[10].getFieldText()).
@@ -114,7 +134,9 @@ public class MUI
 			setBgColor(Color.WHITE).
 			build();	
 	
-//The Pit
+/**
+ * The Pit
+ */
 	fields[11] = new Refuge.Builder().
 			setTitle(text.fieldArray[11].getFieldText()).
 			setSubText(text.fieldArray[11].getFieldText()).
@@ -122,7 +144,9 @@ public class MUI
 			setPicture(text.fieldArray[11].getPicture()).
 			setBgColor(Color.WHITE).
 			build();
-//Goldmine
+/**
+ * Goldmine
+ */
 	fields[12] = new Refuge.Builder().
 			setTitle(text.fieldArray[12].getFieldText()).
 			setSubText(text.fieldArray[12].getFieldText()).
@@ -130,7 +154,7 @@ public class MUI
 			setPicture(text.fieldArray[12].getPicture()).
 			setBgColor(Color.WHITE).
 			build();	
-GUI.create(fields);
+		GUI.create(fields);
 	}
 	
 	/**
@@ -188,19 +212,34 @@ GUI.create(fields);
 	{
 		GUI.displayChanceCard(text);
 	}
-
+	/**
+	 * Creates the Button with a given string.
+	 * @param msg
+	 * @param button
+	 */
 	void button(String msg,String button)
 	{
 		GUI.getUserButtonPressed(msg, button);
 	}
-	
+	/**
+	 * Displays the discription from the initial point of the turn, edits the button to say" Take Turn, and removes the car.
+	 * @param player
+	 * @param shaker
+	 * @param text
+	 */
 	void initialTurn(Player player, Shaker shaker, Text text)
 	{
 		displayMidDescription(player.getPlayerName() + text.getPlayerTurn());
 		button(player.getPlayerName(),text.getTakeTurn());
 		removeCar(player, shaker);
 	}
-	
+	/**
+	 * Displays the discription from the main point of the turn, edits the button to say End turn, and sets the Car. 
+	 * After the button is pressed removes the car and puts it on start again.
+	 * @param player
+	 * @param shaker
+	 * @param text
+	 */
 	void mainTurn(Player player, Shaker shaker,Text text)
 	{
 		setDice(shaker);
