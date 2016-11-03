@@ -1,14 +1,17 @@
+package main;
 /**
+ * @author Emil and Aleksander
  * The Text class holds and controls all text that may be printed to the user.
  * The primary reasoning for reserving all text to a specific class is to ease any process of translation.
- * @author Emil and Aleksander
+ * In future projects we will be creating a text file, for the game to load, and easing the translation process.
  */
 public class Text {
 
 
-	// Creates an array of CustomFields with their separate descriptions and value.
-	
-	public CustomField[] fieldArray =
+	/**
+	 *  Creates an array of CustomFields with their separate descriptions and value.
+	 */
+	CustomField[] fieldArray =
 		{
 			new CustomField(" ", 0, " "),
 			new CustomField(" ", 0, "icons/BridgeIcon.png"),
@@ -29,25 +32,18 @@ public class Text {
 	 * @param getFieldDescription Returns the fieldDescription of a single field in response to the array reference
 	 * @param point the reference to the fields reference in the constructed array
 	 */
-	public String getFieldDescription(int point)
+	private String getFieldDescription(int point)
 	{ 
-		
 		return fieldArray[point].getFieldText();
-		
 	}
 	
 	/**
 	 * @param getFieldValue Returns the fieldVaule of a single field in response to the array reference
 	 * @param point the reference to the fields reference in the constructed array
 	 */
-	public int getFieldValue(int point)
+	int getFieldValue(int point)
 	{
 		return fieldArray[point].getValueInt();
-	}
-	
-	public String getPicture(int point)
-	{
-		return fieldArray[point].getPicture();
 	}
 
 	/**
@@ -55,9 +51,7 @@ public class Text {
 	 */
 	public String getStartDescription()
 	{
-		
 		return ("Hello Players! Today we will be playing a game of dices\nThe object of the game is to get 3000 money!!\nYou will each start with 1000 money\nGood luck to both of you!\nPlayer one please start your turn\n");
-		
 	}
 
 	/**
@@ -66,7 +60,6 @@ public class Text {
 	public String getEndDescription()
 	{
 		return "You won the game";
-		
 	}
 
 	/**
@@ -74,19 +67,8 @@ public class Text {
 	 * @param player the Player object of whom the turn description shall be printed
 	 * @param shake the Shake object signifying the dice roll of the turn
 	 */
-	public void turnDescription(Player player, Shaker shake)
-	{
-		if(shake.getShake()!=10)
-			{
-			System.out.println(player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYour balance is changed by " + getFieldValue(shake.getShake()) + " to:" + player.getAccount().toString());
-			}
-		else
-			{
-			System.out.println(player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYou get an extra turn but your balance is changed by " + getFieldValue(shake.getShake()) + " to:" + player.getAccount().toString());
-			}
-	}
 	
-	public String getTurnDescription(Player player, Shaker shake)
+	String getTurnDescription(Player player, Shaker shake)
 	{
 		if(shake.getShake()!=10)
 			{
@@ -97,6 +79,63 @@ public class Text {
 			return player.getPlayerName() + " rolled " + shake + "\nYou landed on " + getFieldDescription(shake.getShake()) + "\nYou get an extra turn but your balance is changed by " + getFieldValue(shake.getShake()) + " to:\n" + player.getAccount().toString();
 			}
 	}
+	/**
+	 * Returns the Welcome tekst.
+	 * @return Welcome
+	 */
+	public String getWelcome()
+	{
+		return "Welcome!";
+	}
+	/**
+	 * Returns the Start Game string
+	 * @return Start Game
+	 */
+	public String getStartGame()
+	{
+		return "Start Game";
+	}
+	/**
+	 * Returns the Start string
+	 * @return Start
+	 */
+	public String getStartField()
+	{
+		return "START";
+	}
+	/**
+	 * Returns a blank space.
+	 * @return 
+	 */
+	public String getBlankSpace()
+	{
+		return " ";
+	}
+	/**
+	 * Returns the 's turn! string
+	 * @return 's turn!
+	 */
+	public String getPlayerTurn()
+	{
+		return "'s turn!";
+	}
 	
-
+	/**
+	 * Returns the Take turn! string
+	 * @return Take turn!
+	 */
+	public String getTakeTurn()
+	{
+		return "Take turn!";
+	}
+	
+	/**
+	 * Returns the End turn string
+	 * @return End Turn
+	 */
+	public String getEndTurn()
+	{
+		return "End Turn";
+	}
 }
+

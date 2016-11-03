@@ -1,13 +1,15 @@
+package main;
 /**
  * @author Aleksander and Morten N
  * Edited by Emil and Nick
+ * This class holds the responsibility to shake the dies.
  */
 public class Shaker {
 	
 	//Creation of attributes and new instance
 	private int shakeValue;
-	Die die1 = new Die();
-	Die die2 = new Die();
+	private Die die1 = new Die();
+	private Die die2 = new Die();
 	
 	/**
 	 * Creates the constructor, Shaker.
@@ -60,12 +62,5 @@ public class Shaker {
 	public String toString()
 	{
 		return Integer.toString(shakeValue);
-		
-		
-	}
-	public void resetShake()
-	{
-		shakeValue = 0;
-				
 	}
 }

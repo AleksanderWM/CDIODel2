@@ -1,8 +1,8 @@
-
+package main;
 /**
- * Player class is created to keep track of the player's name, and their current score in the game.
- * The way this is done is explained below.
  * @author Jens & Morten C
+ * Edited by Aleksander
+ * Player class is created to keep track of the player's name, and to create an instance of the Account class.
  */
 public class Player {
 	
@@ -14,7 +14,7 @@ public class Player {
 	/**
 	 * Creates the constructor
 	 * @param name Reserves space for the player's name.
-	 * @param point Reserves space for the player's points.
+	 * @param Account creates the instance of an Account within the player object.
 	 */
 	public Player (String name)
 	{
@@ -41,6 +41,10 @@ public class Player {
 		return nameOfPlayer;
 	}
 	
+	/**
+	 * Returns the instance of the Account type within the player object.
+	 * @return myAcc
+	 */
 	public Account getAccount()
 	{
 		return myAcc;
@@ -61,8 +65,3 @@ public class Player {
 	*/
 
 }
-	
-
-	
-
-	
