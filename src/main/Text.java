@@ -34,9 +34,7 @@ public class Text {
 	 */
 	private String getFieldDescription(int point)
 	{ 
-		
 		return fieldArray[point].getFieldText();
-		
 	}
 	
 	/**
@@ -53,9 +51,7 @@ public class Text {
 	 */
 	public String getStartDescription()
 	{
-		
 		return ("Hello Players! Today we will be playing a game of dices\nThe object of the game is to get 3000 money!!\nYou will each start with 1000 money\nGood luck to both of you!\nPlayer one please start your turn\n");
-		
 	}
 
 	/**
@@ -64,7 +60,6 @@ public class Text {
 	public String getEndDescription()
 	{
 		return "You won the game";
-		
 	}
 
 	/**

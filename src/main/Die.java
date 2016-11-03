@@ -31,5 +31,4 @@ public class Die
 	{
 		return Integer.toString(faceValue);
 	}
-	
 }

@@ -60,7 +60,6 @@ public class Game {
 			endGame(player2);
 			}
 		}
-			
 	}
 	
 	/**
