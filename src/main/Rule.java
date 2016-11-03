@@ -6,7 +6,11 @@ package main;
  */
 public class Rule {
 	
-	//Rule for Werewall (Used for -80 points and eksta turn)
+	/**
+	 * Rule for Werewall (Used for eksta turn)
+	 * @param shaker
+	 * @return
+	 */
 	boolean ruleWolf(Shaker shaker)
 	{
 		if (shaker.getShake() == 10)
@@ -19,13 +23,17 @@ public class Rule {
 		}
 	}
 	
-	//Rule used for winner
+	/**
+	 * Rule used for determining the winner
+	 * @param player
+	 * @return
+	 */
 	boolean winner(Player player)
-	{
-	if(player.getAccount().getBalance() >= 3000)
-	{
-	return true;
-	}
-	return false;
-	}
+		{
+		if(player.getAccount().getBalance() >= 3000)
+		{
+			return true;
+		}
+			return false;
+		}
 }

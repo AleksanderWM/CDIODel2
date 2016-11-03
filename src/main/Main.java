@@ -3,10 +3,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		//Create attributes
 		Game gameplay = new Game();
 		
-		//Start game
+		/**
+		 * Starts the game
+		 */
 		gameplay.play();
 	}
 

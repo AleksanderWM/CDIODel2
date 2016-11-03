@@ -10,7 +10,7 @@ public class Game {
 	private MUI mui = new MUI();
 	
 	/**
-	 * @param play Starts the method playLoop, thereby starting the game
+	 * @param play Initiates the board and starts the method playLoop, thereby starting the game
 	 */
 	void play()
 	{
