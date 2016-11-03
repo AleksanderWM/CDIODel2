@@ -5,7 +5,7 @@ public class CustomField {
 	private int fieldValue;
 	private String fieldPicture;
 	
-	public CustomField(String description, int value,String picture)
+	CustomField(String description, int value,String picture)
 	{
 		fieldDescription = description;
 		fieldValue = value;

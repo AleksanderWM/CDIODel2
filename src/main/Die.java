@@ -11,7 +11,7 @@ public class Die
 	}
 	
 	//Method for rolling die to achieve random face value
-	public void setRoll()
+	void setRoll()
 	{
 		faceValue = (int)(Math.random() * MAX) + 1;
 	}
@@ -26,5 +26,4 @@ public class Die
 	{
 		return Integer.toString(faceValue);
 	}
-	
 }

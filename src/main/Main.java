@@ -9,5 +9,4 @@ public class Main {
 		//Start game
 		gameplay.play();
 	}
-
 }

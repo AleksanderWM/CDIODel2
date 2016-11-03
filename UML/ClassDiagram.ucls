@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="main.Main" project="16_del2" file="/16_del2/src/main/Main.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="487" y="62"/>    
+    <position height="-1" width="-1" x="557" y="60"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="main.Account" project="16_del2" file="/16_del2/src/main/Account.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="253" y="677"/>    
+    <position height="-1" width="-1" x="325" y="612"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="main.CustomField" project="16_del2" file="/16_del2/src/main/CustomField.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1185" y="512"/>    
+    <position height="-1" width="-1" x="1163" y="594"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="main.Player" project="16_del2" file="/16_del2/src/main/Player.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="247" y="338"/>    
+    <position height="-1" width="-1" x="315" y="321"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="main.Shaker" project="16_del2" file="/16_del2/src/main/Shaker.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="515" y="449"/>    
+    <position height="-1" width="-1" x="571" y="431"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,7 +48,7 @@
   </class>  
   <class id="6" language="java" name="main.MUI" project="16_del2" file="/16_del2/src/main/MUI.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="747" y="555"/>    
+    <position height="-1" width="-1" x="758" y="589"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
   </class>  
   <class id="7" language="java" name="main.Text" project="16_del2" file="/16_del2/src/main/Text.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1186" y="171"/>    
+    <position height="-1" width="-1" x="1144" y="250"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -66,7 +66,7 @@
   </class>  
   <class id="8" language="java" name="main.Game" project="16_del2" file="/16_del2/src/main/Game.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="663" y="172"/>    
+    <position height="-1" width="-1" x="702" y="211"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -75,7 +75,7 @@
   </class>  
   <class id="9" language="java" name="main.Rule" project="16_del2" file="/16_del2/src/main/Rule.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="960" y="380"/>    
+    <position height="-1" width="-1" x="967" y="441"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -84,133 +84,116 @@
   </class>  
   <class id="10" language="java" name="main.Die" project="16_del2" file="/16_del2/src/main/Die.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="515" y="753"/>    
+    <position height="-1" width="-1" x="549" y="734"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <component id="11" language="java" name="GUI.jar" project="16_del2" file="/16_del2/GUI.jar" binary="true" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="781" y="749"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </component>  
-  <association id="12">    
+  <association id="11">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="13" name="fieldArray">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="14" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="12" name="fieldArray"/>      
+      <multiplicity id="13" minimum="0" maximum="2147483647">        
+        <position height="16" width="21" x="1166" y="450"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="15">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="16" name="text">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="17" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="18">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="19" name="rules">        
-        <position height="18" width="34" x="869" y="300"/>      
-      </attribute>      
-      <multiplicity id="20" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="21">    
+  <association id="14">    
     <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="22" name="myAcc">        
-        <position height="18" width="42" x="258" y="544"/>      
-      </attribute>      
-      <multiplicity id="23" minimum="0" maximum="1">        
-        <position height="16" width="23" x="260" y="565"/>      
+      <attribute id="15" name="myAcc"/>      
+      <multiplicity id="16" minimum="0" maximum="1">        
+        <position height="16" width="23" x="330" y="494"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="24">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="25" name="player2">        
-        <position height="18" width="44" x="366" y="312"/>      
-      </attribute>      
-      <multiplicity id="26" minimum="0" maximum="1">        
-        <position height="16" width="23" x="336" y="278"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="27">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="28" name="player1">        
-        <position height="18" width="44" x="343" y="259"/>      
-      </attribute>      
-      <multiplicity id="29" minimum="0" maximum="1">        
-        <position height="16" width="23" x="336" y="321"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="30">    
+  <association id="17">    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="31" name="die2">        
-        <position height="18" width="30" x="516" y="632"/>      
+      <attribute id="18" name="die2">        
+        <position height="18" width="28" x="563" y="603"/>      
       </attribute>      
-      <multiplicity id="32" minimum="0" maximum="1">        
-        <position height="16" width="23" x="520" y="647"/>      
+      <multiplicity id="19" minimum="0" maximum="1">        
+        <position height="16" width="23" x="562" y="631"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="33">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="34" name="shaker">        
-        <position height="18" width="43" x="530" y="324"/>      
+  <association id="20">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="21" name="die1">        
+        <position height="18" width="28" x="497" y="602"/>      
       </attribute>      
-      <multiplicity id="35" minimum="0" maximum="1">        
-        <position height="16" width="23" x="581" y="333"/>      
+      <multiplicity id="22" minimum="0" maximum="1">        
+        <position height="16" width="23" x="512" y="629"/>      
       </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="23">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="24" name="shaker">        
+        <position height="18" width="41" x="588" y="315"/>      
+      </attribute>      
+      <multiplicity id="25" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="36">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="37" name="die1">        
-        <position height="18" width="30" x="462" y="633"/>      
+  <association id="26">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="27" name="player1">        
+        <position height="18" width="44" x="423" y="258"/>      
       </attribute>      
-      <multiplicity id="38" minimum="0" maximum="1">        
-        <position height="16" width="23" x="467" y="649"/>      
+      <multiplicity id="28" minimum="0" maximum="1">        
+        <position height="16" width="23" x="404" y="313"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
+    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="39">    
+  <association id="29">    
     <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="40" name="mui">        
-        <position height="18" width="26" x="670" y="371"/>      
+      <attribute id="30" name="rules">        
+        <position height="18" width="32" x="852" y="371"/>      
       </attribute>      
-      <multiplicity id="41" minimum="0" maximum="1">        
-        <position height="16" width="23" x="719" y="376"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="32">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="33" name="player2">        
+        <position height="18" width="44" x="430" y="317"/>      
+      </attribute>      
+      <multiplicity id="34" minimum="0" maximum="1">        
+        <position height="16" width="23" x="398" y="272"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="35">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="36" name="text"/>      
+      <multiplicity id="37" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="38">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="39" name="mui">        
+        <position height="18" width="24" x="700" y="416"/>      
+      </attribute>      
+      <multiplicity id="40" minimum="0" maximum="1">        
+        <position height="16" width="23" x="745" y="416"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    

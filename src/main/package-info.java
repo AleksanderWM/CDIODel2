@@ -2,7 +2,7 @@
  * Package for main code
  */
 /**
- * @author moeni
+ * @author Morten N
  *
  */
 package main;

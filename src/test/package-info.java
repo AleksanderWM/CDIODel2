@@ -2,7 +2,7 @@
  * Package for test code
  */
 /**
- * @author moeni
+ * @author Morten N
  *
  */
 package test;

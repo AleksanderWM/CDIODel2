@@ -53,11 +53,4 @@ public class Player {
 	{
 		return nameOfPlayer;
 	}
-		
-	/**
-	* Calculates the player's balance. This is done by having the (int currentShakerValue) added to the score. 
-	* @param currentShakerValue Adds the current shaker points to the total score.
-	* @return
-	*/
-
 }

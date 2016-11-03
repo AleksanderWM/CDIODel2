@@ -7,8 +7,8 @@ public class Shaker {
 	
 	//Creation of attributes and new instance
 	private int shakeValue;
-	Die die1 = new Die();
-	Die die2 = new Die();
+	private Die die1 = new Die();
+	private Die die2 = new Die();
 	
 	/**
 	 * Creates the constructor, Shaker.
@@ -61,9 +61,5 @@ public class Shaker {
 	public String toString()
 	{
 		return Integer.toString(shakeValue);
-	}
-	public void resetShake()
-	{
-		shakeValue = 0;
 	}
 }
